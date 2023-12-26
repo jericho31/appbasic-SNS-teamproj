@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">appbasic-SNS-teamproj</string>
+    <string name="app_name" translatable="false">appbasic-SNS-teamproj</string>
+    <string name="KOR_id_hint">아이디</string>
+    <string name="KOR_pw_hint">패스워드</string>
+    <string name="KOR_logInButton">로그인</string>
+    <string name="KOR_signUpButton">회원가입</string>
+    <string name="KOR_signUpQuestion">처음이용하시는건가요?</string>
 </resources>
