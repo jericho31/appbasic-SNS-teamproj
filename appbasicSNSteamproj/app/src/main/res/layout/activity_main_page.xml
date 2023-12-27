@@ -48,12 +48,12 @@
         android:layout_height="45dp"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="35dp"
-        android:background="#ADFFFFFF"
         android:fontFamily="@font/roboto_black"
         android:text="코딩이야기"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:background="@drawable/selector_button"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
@@ -65,8 +65,7 @@
         android:layout_height="45dp"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="35dp"
-        android:background="#ADFFFFFF"
-
+        android:background="@drawable/selector_button"
         android:fontFamily="@font/roboto_black"
         android:text="일상"
         android:textColor="#040000"
@@ -96,6 +95,7 @@
         android:hint="관심있는 내용을 검색해보세요!"
         android:inputType="text"
         android:maxLines="1"
+
         app:layout_constraintBottom_toTopOf="@+id/daily"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -222,6 +222,16 @@
         android:background="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         tools:layout_editor_absoluteX="-1dp" />
+
+    <Button
+        android:id="@+id/btnDetail"
+        android:layout_width="408dp"
+        android:layout_height="43dp"
+        android:background="#00000000"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
