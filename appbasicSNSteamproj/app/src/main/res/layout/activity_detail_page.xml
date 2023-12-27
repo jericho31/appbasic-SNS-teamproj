@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailPageActivity">
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="60dp"
+        android:background="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/back"
+        tools:layout_editor_absoluteX="-16dp" />
+
+<!--    The value of attribute "android:text" associated with an element type "Button" must not contain the '<' character.-->
+    <Button
+        android:id="@+id/back"
+        android:layout_width="123dp"
+        android:layout_height="41dp"
+        android:background="#00FFFFFF"
+        android:fontFamily="@font/roboto_black"
+        android:text="- 뒤로가기"
+        android:textColor="#020202"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/appTrack"
+        android:layout_width="93dp"
+        android:layout_height="25dp"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="51dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="130dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="4dp"
+        android:background="#E161A664"
+        android:fontFamily="@font/roboto_black"
+        android:gravity="center|left"
+        android:text="스파르타 숲"
+        android:textAlignment="gravity"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
