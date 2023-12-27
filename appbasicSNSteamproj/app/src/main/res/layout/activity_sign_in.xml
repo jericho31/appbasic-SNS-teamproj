@@ -65,8 +65,9 @@
         android:id="@+id/iv_sparta"
         android:layout_width="300dp"
         android:layout_height="180dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="120dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_sparta" />

@@ -17,6 +17,12 @@ class MainPageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(activity_main_page)
 
+        val btn_logIn = findViewById<Button>(R.id.btn_logIn2)
+        btn_logIn.setOnClickListener {
+            val intent = Intent(this, SignInActivity::class.java)
+            startActivity(intent)
+        }
+
 //        val btnGood: imageButton = findViewById(R.id.btnGood)
 //        goodCount = findViewById(R.id.goodCount)
 
@@ -24,12 +30,6 @@ class MainPageActivity : AppCompatActivity() {
 //            // 하트 버튼 클릭 시 likeCount 증가 및 텍스트뷰 업데이트
 //            goodcount++
 //            goodCount.text = goodCount.toString()
-            /*
-        val logInButton:Button = findViewById(R.id.logInButton)
-        logInButton.setOnClickListener {
-            val intent = Intent(this, SignInActivity::class.java)
-            startActivity(intent)
-        }
-    */
+
         }
     }

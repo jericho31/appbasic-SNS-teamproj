@@ -1,5 +1,6 @@
 package com.example.appbasic_sns_teamproj
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -138,6 +139,14 @@ class SignUpActivity : AppCompatActivity() {
             }
             intent.putExtra(Extra.password, etPw.text.toString())
             setResult(RESULT_OK, intent)
+
+//            //SignIn으로 Id와 Pw 보내기(일단 데이터 넘기는건 가능 하지만 데이터가 null이나 주소가 떠 수정필요)
+//            val intent_sendIdPw = Intent(this, SignInActivity::class.java)
+//            intent_sendIdPw.putExtra("idData", etMail.toString())
+//            intent_sendIdPw.putExtra("pwData", etPw.toString())
+//            setResult(RESULT_OK, intent_sendIdPw)
+//            Log.d("ASDFFF", "id = ${etMail.toString()}")
+//            Log.d("ASDFFF", "pw = ${etPw.toString()}")
             finish()
         }
 
@@ -156,6 +165,8 @@ class SignUpActivity : AppCompatActivity() {
 
                 override fun onNothingSelected(parent: AdapterView<*>?) {}
             }
+
+
     }
 
     private var checkCount = 0  // for debug
