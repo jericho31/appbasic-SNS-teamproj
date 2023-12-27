@@ -1,4 +1,5 @@
 <resources>
+<<<<<<< HEAD
     <string name="app_name">SpatraForest</string>
     <string name="profil_txt_track">트랙</string>
     <string name="profil_txt_id">아이디</string>
@@ -8,4 +9,12 @@
     <string name="lng_txt_setting">언어 설정</string>
     <string name="lng_txt_korean">한국어 (Korean)</string>
     <string name="lng_txt_english">영어 (English)</string>
+=======
+    <string name="app_name" translatable="false">appbasic-SNS-teamproj</string>
+    <string name="KOR_id_hint">아이디</string>
+    <string name="KOR_pw_hint">패스워드</string>
+    <string name="KOR_logInButton">로그인</string>
+    <string name="KOR_signUpButton">회원가입</string>
+    <string name="KOR_signUpQuestion">처음이용하시는건가요?</string>
+>>>>>>> 817ae6f3736d822c5b423b9da3d8032b8eef6182
 </resources>

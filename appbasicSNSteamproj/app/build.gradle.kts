@@ -4,13 +4,12 @@ plugins {
 }
 
 android {
-    namespace = "com.example.spatraforest"
+    namespace = "com.example.appbasic_sns_teamproj"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.spatraforest"
-        minSdk = 24
-        targetSdk = 33
+        applicationId = "com.example.sappbasic_sns_teamproj"
+        minSdk = 26
         versionCode = 1
         versionName = "1.0"
 
