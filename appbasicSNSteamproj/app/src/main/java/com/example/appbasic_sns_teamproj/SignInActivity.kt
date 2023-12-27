@@ -33,10 +33,10 @@ class SignInActivity : AppCompatActivity() {
                  Toast.makeText(this, "패스워드를 확인해주세요", Toast.LENGTH_SHORT).show()
              }
              else{
+                 Toast.makeText(this, "환영합니다", Toast.LENGTH_SHORT).show()
                  val intent = Intent(this, MainPageActivity::class.java)
                  startActivity(intent)
              }
-
          }
     }
 }
