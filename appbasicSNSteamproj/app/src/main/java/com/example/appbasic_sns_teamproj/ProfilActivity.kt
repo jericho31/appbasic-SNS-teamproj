@@ -14,8 +14,8 @@ class ProfilActivity : AppCompatActivity() {
         val id = intent.getStringExtra("id")
         val btnLanguageSetting = findViewById<Button>(R.id.btn_languageSetting)
 
-        track.setText(track)
-        id.setText(id)
+        //track.setText(track)
+        //id.setText(id)
 
         btnLanguageSetting.setOnClickListener{
             val intent = Intent(this, LanguageSettingActivity::class.java)
