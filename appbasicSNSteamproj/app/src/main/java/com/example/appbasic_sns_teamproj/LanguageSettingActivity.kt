@@ -1,4 +1,4 @@
-package com.example.spatraforest
+package com.example.appbasic_sns_teamproj
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

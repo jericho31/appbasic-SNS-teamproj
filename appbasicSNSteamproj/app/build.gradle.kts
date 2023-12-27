@@ -6,7 +6,6 @@ plugins {
 android {
     namespace = "com.example.appbasic_sns_teamproj"
     compileSdk = 34
-
     defaultConfig {
         applicationId = "com.example.sappbasic_sns_teamproj"
         minSdk = 26
