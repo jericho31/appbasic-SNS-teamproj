@@ -26,13 +26,13 @@ class MyPageActivity : AppCompatActivity() {
         }
 
         val iv_profil = findViewById<ImageView>(R.id.iv_profil)
-        val image = when (tv_track) {
-            android ->
-            ios ->
-            unity ->
-            else ->
-        }
-        iv_profil.setImageDrawable(ResourcesCompat.getDrawable(resources, image, null))
+//        val image = when (tv_track) {
+//            android ->
+//            ios ->
+//            unity ->
+//            else ->
+//        }
+//        iv_profil.setImageDrawable(ResourcesCompat.getDrawable(resources, image, null))
 
         btnLanguageSetting.setOnClickListener{
             val intent = Intent(this, LanguageSettingActivity::class.java)
