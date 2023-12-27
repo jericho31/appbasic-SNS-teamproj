@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">appbasic-SNS-teamproj</string>
+    <string name="profil_txt_track">Track</string>
+    <string name="profil_txt_id">ID</string>
+    <string name="profil_btn_setting">Language Setting</string>
+    <string name="profil_btn_revise">Modifying personal info</string>
+    <string name="profil_btn_withdraw">Membership Withdrawal</string>
+    <string name="lng_txt_setting">Language Setting</string>
     <string name="KOR_id_hint">ID</string>
     <string name="KOR_pw_hint">Password</string>
     <string name="KOR_logInButton">LogIn</string>
