@@ -15,13 +15,14 @@
         app:layout_constraintTop_toBottomOf="@+id/back"
         tools:layout_editor_absoluteX="-16dp" />
 
+<!--    The value of attribute "android:text" associated with an element type "Button" must not contain the '<' character.-->
     <Button
         android:id="@+id/back"
         android:layout_width="123dp"
         android:layout_height="41dp"
         android:background="#00FFFFFF"
         android:fontFamily="@font/roboto_black"
-        android:text="<- 뒤로가기"
+        android:text="- 뒤로가기"
         android:textColor="#020202"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
