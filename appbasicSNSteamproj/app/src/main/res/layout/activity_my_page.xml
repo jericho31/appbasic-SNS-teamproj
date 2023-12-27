@@ -6,51 +6,91 @@
     android:layout_height="match_parent"
     tools:context=".MyPageActivity">
 
-    <View
-        android:id="@+id/view2"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
+    <ImageView
+        android:id="@+id/iv_profil"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginTop="60dp"
-        android:background="@android:color/black"
-        app:layout_constraintTop_toBottomOf="@+id/back"
-        tools:layout_editor_absoluteX="-16dp" />
-
-<!--    The value of attribute "android:text" associated with an element type "Button" must not contain the '<' character.-->
-    <Button
-        android:id="@+id/back"
-        android:layout_width="123dp"
-        android:layout_height="41dp"
-        android:background="#00FFFFFF"
-        android:fontFamily="@font/roboto_black"
-        android:text="- 뒤로가기"
-        android:textColor="#020202"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <TextView
-        android:id="@+id/appTrack"
-        android:layout_width="93dp"
-        android:layout_height="25dp"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="51dp" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="130dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="4dp"
-        android:background="#E161A664"
-        android:fontFamily="@font/roboto_black"
-        android:gravity="center|left"
-        android:text="스파르타 숲"
-        android:textAlignment="gravity"
-        android:textSize="24sp"
-        android:textStyle="normal"
+        android:background="@drawable/rounded_background"
+        android:clipToOutline="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/btn_languageSetting"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:text="@string/profil_btn_setting"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_id" />
+
+    <TextView
+        android:id="@+id/txt_track"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/profil_txt_track"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_profil" />
+
+    <TextView
+        android:id="@+id/txt_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/profil_txt_id"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_track" />
+
+    <Button
+        android:id="@+id/btn_modifyInfo"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="@string/profil_btn_revise"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_languageSetting" />
+
+    <Button
+        android:id="@+id/btn_withdraw"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="@string/profil_btn_withdraw"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_modifyInfo" />
+
+    <ImageView
+        android:id="@+id/iv_return"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="340dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

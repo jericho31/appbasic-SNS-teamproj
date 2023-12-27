@@ -16,10 +16,10 @@
             android:name=".LanguageSettingActivity"
             android:exported="false" />
         <activity
-            android:name=".ProfilActivity"
+            android:name=".MyPageActivity"
             android:exported="true" />
         <activity
-            android:name=".MyPageActivity"
+            android:name=".DetailPageActivity"
             android:exported="false" />
         <activity
             android:name=".SignUpActivity"
