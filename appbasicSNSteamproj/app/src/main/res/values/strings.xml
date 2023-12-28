@@ -1,16 +1,39 @@
 <resources>
+<!--    이름 통일-->
     <string name="app_name" translatable="false">appbasic-SNS-teamproj</string>
-    <string name="profil_txt_track">트랙</string>
-    <string name="profil_txt_id">아이디</string>
-    <string name="profil_btn_setting">언어 설정</string>
-    <string name="profil_btn_revise">개인정보 수정</string>
-    <string name="profil_btn_withdraw">회원탈퇴</string>
-    <string name="lng_txt_setting">언어 설정</string>
+    <string name="atSign" translatable="false">\@</string>
     <string name="lng_txt_korean" translatable="false">한국어 (Korean)</string>
     <string name="lng_txt_english" translatable="false">영어 (English)</string>
-    <string name="KOR_id_hint">아이디</string>
-    <string name="KOR_pw_hint">패스워드</string>
-    <string name="KOR_logInButton">로그인</string>
-    <string name="KOR_signUpButton">회원가입</string>
-    <string name="KOR_signUpQuestion">처음이용하시는건가요?</string>
+
+    <string name="txt_track">트랙</string>
+    <string name="txt_id">아이디(이메일)</string>
+    <string name="txt_pw">비밀번호</string>
+    <string name="txt_modify">개인정보 수정</string>
+    <string name="txt_withdraw">회원탈퇴</string>
+    <string name="txt_languageSetting">언어 설정</string>
+    <string name="txt_logIn">로그인</string>
+    <string name="txt_signUp">회원가입</string>
+    <string name="txt_signUpQuestion">처음이용하시는건가요?</string>
+    <string name="txt_name">이름</string>
+    <string name="txt_getName">이름을 입력해주세요</string>
+    <string name="txt_email">이메일</string>
+    <string name="txt_getEmail">이메일을 입력해주세요</string>
+    <string name="txt_getPw">영문, 숫자, 특수문자 혼합 8~16자</string>
+    <string name="txt_pwCheck">비밀번호 확인</string>
+    <string name="txt_getPwCheck">비밀번호를 한 번 더 입력하세요</string>
+
+<!--    <string name="app_name" translatable="false">appbasic-SNS-teamproj</string>-->
+<!--    <string name="profil_txt_track">트랙</string>-->
+<!--    <string name="profil_txt_id">아이디</string>-->
+<!--    <string name="profil_btn_setting">언어 설정</string>-->
+<!--    <string name="profil_btn_revise">개인정보 수정</string>-->
+<!--    <string name="profil_btn_withdraw">회원탈퇴</string>-->
+<!--    <string name="lng_txt_setting">언어 설정</string>-->
+<!--    <string name="lng_txt_korean" translatable="false">한국어 (Korean)</string>-->
+<!--    <string name="lng_txt_english" translatable="false">영어 (English)</string>-->
+<!--    <string name="KOR_id_hint">아이디</string>-->
+<!--    <string name="KOR_pw_hint">패스워드</string>-->
+<!--    <string name="KOR_logInButton">로그인</string>-->
+<!--    <string name="KOR_signUpButton">회원가입</string>-->
+<!--    <string name="KOR_signUpQuestion">처음이용하시는건가요?</string>-->
 </resources>
