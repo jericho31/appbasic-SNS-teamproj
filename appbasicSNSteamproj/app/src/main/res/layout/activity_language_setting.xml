@@ -41,8 +41,8 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/rbtn_english"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintStart_toStartOf="@id/rbtn_english"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
 
     <RadioButton
         android:id="@+id/rbtn_english"
@@ -54,7 +54,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rbtn_korean" />
+        app:layout_constraintTop_toBottomOf="@id/rbtn_korean" />
 
     <Button
         android:id="@+id/btn_check"
