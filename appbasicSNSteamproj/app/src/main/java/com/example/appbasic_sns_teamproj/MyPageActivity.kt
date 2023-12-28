@@ -13,6 +13,7 @@ class MyPageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_page)
 
+        // 엑스트라에서 트랙과 아이디 intent 받기
         val tv_track = findViewById<TextView>(R.id.txt_track)
         val tv_id = findViewById<TextView>(R.id.txt_id)
         if (intent.hasExtra("track")) {
@@ -23,16 +24,26 @@ class MyPageActivity : AppCompatActivity() {
 
         }
 
+        // 자신의 트랙에 따라서 나타나는 프로필사진 분류
         val iv_profil = findViewById<ImageView>(R.id.iv_profil)
 //        val image = when (intent.getStringExtra("track")) {
 //            android ->
 //            ios ->
-//            unity ->
 //            else ->
 //        }
 //        iv_profil.setImageDrawable(ResourcesCompat.getDrawable(resources, image, null))
 
+        // 자신의 트랙에 따라서 보여지는 트랙과 게시글 제목 분류
+        val tv_trackName = findViewById<TextView>(R.id.txt_apptrack)
+        val tv_writting = findViewById<TextView>(R.id.txt_writing)
+//        tv_trackName.text = intent.getStringExtra("track")
+//        tv_writting.text = when(intent.getStringExtra("track")) {
+//            android -> "스파르타 친구들 새해 잘 보내!"
+//            ios -> "코딩 너무 어려워.."
+//            else -> "UNITY 팁 몇가지 알려줄게!"
+//        }
 
+        // 버튼 클릭
         val btnLanguageSetting = findViewById<Button>(R.id.btn_languageSetting)
         val btnBackToMain = findViewById<ImageView>(R.id.iv_return)
         val btnGoToDetail = findViewById<Button>(R.id.btn_goDetail)

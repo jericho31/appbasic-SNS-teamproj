@@ -38,7 +38,7 @@
         android:id="@+id/txt_track"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="60dp"
         android:text="@string/txt_track"
         android:textSize="22sp"
         android:textStyle="bold"
@@ -111,7 +111,7 @@
         app:layout_constraintTop_toTopOf="@+id/linearLayout" />
 
     <TextView
-        android:id="@+id/apptrack"
+        android:id="@+id/txt_apptrack"
         android:layout_width="60dp"
         android:layout_height="21dp"
         android:layout_marginTop="10dp"
@@ -119,13 +119,13 @@
         android:fontFamily="sans-serif-medium"
         android:gravity="center_horizontal"
         android:text="@string/my_page_trackname"
-        android:textColor="#9F9B9B"
+        android:textColor="#8BC34A"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toTopOf="@+id/linearLayout" />
 
     <TextView
-        android:id="@+id/writing"
+        android:id="@+id/txt_writing"
         android:layout_width="183dp"
         android:layout_height="26dp"
         android:layout_marginStart="3dp"
@@ -135,7 +135,7 @@
         android:gravity="center"
         android:text="@string/my_page_postname"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-        app:layout_constraintStart_toEndOf="@+id/apptrack"
+        app:layout_constraintStart_toEndOf="@+id/txt_apptrack"
         app:layout_constraintTop_toTopOf="@+id/linearLayout"
         tools:ignore="MissingConstraints" />
 
