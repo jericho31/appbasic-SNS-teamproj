@@ -24,7 +24,7 @@ class MyPageActivity : AppCompatActivity() {
         }
 
         val iv_profil = findViewById<ImageView>(R.id.iv_profil)
-//        val image = when (tv_track) {
+//        val image = when (intent.getStringExtra("track")) {
 //            android ->
 //            ios ->
 //            unity ->
