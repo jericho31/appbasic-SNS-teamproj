@@ -16,6 +16,7 @@ class LanguageSettingActivity : AppCompatActivity() {
     private lateinit var korean: RadioButton
     private lateinit var english: RadioButton
     private lateinit var language_code: String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_language_setting)

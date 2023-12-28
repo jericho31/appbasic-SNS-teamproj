@@ -78,7 +78,8 @@
             android:id="@+id/btn_goDetail"
             android:layout_width="408dp"
             android:layout_height="50dp"
-            android:background="#00000000" />
+            android:background="#00000000"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/goodCount_mypage"
