@@ -24,12 +24,12 @@ class MyPageActivity : AppCompatActivity() {
 
         }
 
-        // 자신의 트랙에 따라서 나타나는 프로필사진 분류
-        val iv_profil = findViewById<ImageView>(R.id.iv_profil)
-//        val image = when (intent.getStringExtra("track")) {
-//            android ->
-//            ios ->
-//            else ->
+        // 프로필사진 분류 (생각해보니 이걸 굳이 여기서 랜덤을 줄 필요가 없네)
+//        val iv_profil = findViewById<ImageView>(R.id.iv_profil)
+//        val image = when ((1..3).random()) {
+//            1 -> R.drawable.sparta
+//            2 -> R.drawable.sparta2
+//            else -> R.drawable.sparta3
 //        }
 //        iv_profil.setImageDrawable(ResourcesCompat.getDrawable(resources, image, null))
 
