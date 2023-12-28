@@ -38,6 +38,11 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints">
 
+        <Button
+            android:id="@+id/btnDetail"
+            android:layout_width="408dp"
+            android:layout_height="43dp"
+            android:background="#00000000" />
     </LinearLayout>
 
 
@@ -228,16 +233,6 @@
         android:background="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         tools:layout_editor_absoluteX="-1dp" />
-
-    <Button
-        android:id="@+id/btnDetail"
-        android:layout_width="408dp"
-        android:layout_height="43dp"
-        android:background="#00000000"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout"
-        app:layout_constraintTop_toBottomOf="@+id/view3" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

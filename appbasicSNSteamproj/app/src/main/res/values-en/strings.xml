@@ -12,4 +12,10 @@
     <string name="KOR_logInButton">LogIn</string>
     <string name="KOR_signUpButton">SignUp</string>
     <string name="KOR_signUpQuestion">Is it your first playing this app?</string>
+    <string name="lng_btn_check">check</string>
+    <string name="my_page_time">1 days ago</string>
+    <string name="my_page_post">Posts</string>
+    <string name="my_page_comment">Comments</string>
+    <string name="my_page_commentingpost">Posts I comment</string>
+    <string name="my_page_markingpost">Posts I marked</string>
 </resources>
