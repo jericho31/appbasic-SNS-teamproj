@@ -24,12 +24,12 @@ class MainPageActivity : AppCompatActivity() {
 //            // 하트 버튼 클릭 시 likeCount 증가 및 텍스트뷰 업데이트
 //            goodcount++
 //            goodCount.text = goodCount.toString()
-            /*
-        val logInButton:Button = findViewById(R.id.logInButton)
+
+        val logInButton:Button = findViewById(R.id.button)
         logInButton.setOnClickListener {
             val intent = Intent(this, SignInActivity::class.java)
             startActivity(intent)
         }
-    */
+
         }
     }

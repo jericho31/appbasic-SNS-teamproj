@@ -132,21 +132,16 @@ class SignUpActivity : AppCompatActivity() {
         arrET.forEach { it.onFocusChangeListener = onFocusChangeListener }
 
         btn.setOnClickListener {
+            val intent_sendIdPwToSignIn = Intent(this, SignInActivity::class.java)
+            val etPw_text = etPw.text
             if (spinner.isVisible) {
-                intent.putExtra(Extra.id, "${etMail.text}@${spinner.selectedItem}")
+                intent_sendIdPwToSignIn.putExtra(Extra.id, "${etMail.text}@${spinner.selectedItem}")
             } else {
-                intent.putExtra(Extra.id, "${etMail.text}@${etDomain.text}")
+                intent_sendIdPwToSignIn.putExtra(Extra.id, "${etMail.text}@${etDomain.text}")
             }
-            intent.putExtra(Extra.password, etPw.text.toString())
-            setResult(RESULT_OK, intent)
-
-//            //SignIn으로 Id와 Pw 보내기(일단 데이터 넘기는건 가능 하지만 데이터가 null이나 주소가 떠 수정필요)
-//            val intent_sendIdPw = Intent(this, SignInActivity::class.java)
-//            intent_sendIdPw.putExtra("idData", etMail.toString())
-//            intent_sendIdPw.putExtra("pwData", etPw.toString())
-//            setResult(RESULT_OK, intent_sendIdPw)
-//            Log.d("ASDFFF", "id = ${etMail.toString()}")
-//            Log.d("ASDFFF", "pw = ${etPw.toString()}")
+            intent_sendIdPwToSignIn.putExtra(Extra.password, etPw_text.toString())
+//            Log.d("ASDFFF", "id = ${Extra.id}")
+            setResult(RESULT_OK, intent_sendIdPwToSignIn)
             finish()
         }
 

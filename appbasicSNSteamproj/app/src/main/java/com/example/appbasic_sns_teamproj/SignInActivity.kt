@@ -27,11 +27,10 @@ class SignInActivity : AppCompatActivity() {
         editTv_id = findViewById(R.id.editTv_id)
         editTv_pw = findViewById(R.id.editTv_pw)
 
-//        registerForActivityResult()
+        registerForActivityResult()
         btn_goSignUpActivity.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
-            startActivity(intent)
-//            registerLauncher.launch(intent)
+            registerLauncher.launch(intent)
         }
 
 
@@ -46,21 +45,21 @@ class SignInActivity : AppCompatActivity() {
              else{
                  Toast.makeText(this, "환영합니다", Toast.LENGTH_SHORT).show()
                  val intent = Intent(this, MainPageActivity::class.java)
-                 startActivity(intent)
+                 registerLauncher.launch(intent)
              }
          }
     }
-//    fun registerForActivityResult(){
-//        registerLauncher =registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
-//            result ->
-//            if(result.resultCode == RESULT_OK){
-//                var idData =result.data?.getStringExtra("idData")
-//                var pwData =result.data?.getStringExtra("pwData")
-//                Log.d("ASDFFFF", "id = $idData")
-//                Log.d("ASDFFFF", "pw = $pwData")
-//                editTv_id.setText(idData)
-//                editTv_pw.setText(pwData)
-//            }
-//        }
-//    }
+    fun registerForActivityResult(){
+        registerLauncher =registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
+            result ->
+            if(result.resultCode == RESULT_OK){
+                var idData =result.data?.getStringExtra(Extra.id)
+                var pwData =result.data?.getStringExtra(Extra.password)
+//                Log.d("ASDFFFF", "id = ${Extra.id}")
+//                Log.d("ASDFFFF", "pw = ${Extra.password}")
+                editTv_id.setText(idData)
+                editTv_pw.setText(pwData)
+            }
+        }
+    }
 }
