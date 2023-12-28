@@ -463,9 +463,6 @@
         app:layout_constraintBottom_toTopOf="@id/view5"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
-        andr
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
