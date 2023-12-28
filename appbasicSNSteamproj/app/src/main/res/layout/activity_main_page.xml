@@ -6,6 +6,50 @@
     android:layout_height="match_parent"
     tools:context=".MainPageActivity">
 
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/userprofile"
+        tools:layout_editor_absoluteX="-30dp" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="9dp"
+        android:background="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/daily"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <View
+        android:id="@+id/view9"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/btnDetail3"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <View
+        android:id="@+id/view8"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="1dp"
+        android:background="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/btnDetail2"
+        tools:layout_editor_absoluteX="-2dp" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/search"
+        tools:layout_editor_absoluteX="-16dp" />
+
     <TextView
         android:id="@+id/textView2"
         style="@style/Widget.Material3.MaterialTimePicker.Display.HelperText"
@@ -48,12 +92,12 @@
         android:layout_height="45dp"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="35dp"
+        android:background="@drawable/selector_button"
         android:fontFamily="@font/roboto_black"
         android:text="코딩이야기"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:background="@drawable/selector_button"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
@@ -115,7 +159,33 @@
         app:layout_constraintTop_toTopOf="@+id/linearLayout" />
 
     <TextView
-        android:id="@+id/apptrack"
+        android:id="@+id/last2"
+        android:layout_width="44dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/roboto_black"
+        android:gravity="center"
+        android:text="1일전"
+        android:textIsSelectable="false"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDetail2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnDetail2" />
+
+    <TextView
+        android:id="@+id/last3"
+        android:layout_width="44dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/roboto_black"
+        android:gravity="center"
+        android:text="1일전"
+        android:textIsSelectable="false"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDetail3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnDetail3" />
+
+    <TextView
+        android:id="@+id/appTrack"
         android:layout_width="60dp"
         android:layout_height="21dp"
         android:layout_marginTop="10dp"
@@ -123,7 +193,7 @@
         android:fontFamily="sans-serif-medium"
         android:gravity="center_horizontal"
         android:text="Android"
-        android:textColor="#9F9B9B"
+        android:textColor="#8BC34A"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toTopOf="@+id/linearLayout" />
@@ -139,10 +209,66 @@
         android:gravity="center"
         android:text="스파르타 친구들 새해 잘 보내!"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-        app:layout_constraintStart_toEndOf="@+id/apptrack"
+        app:layout_constraintStart_toEndOf="@+id/appTrack"
         app:layout_constraintTop_toTopOf="@+id/linearLayout"
         tools:ignore="MissingConstraints" />
 
+
+    <TextView
+        android:id="@+id/writing2"
+        android:layout_width="183dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/roboto_black"
+        android:gravity="center"
+        android:text="코딩 너무 어려워.."
+        app:layout_constraintBottom_toTopOf="@+id/btnDetail3"
+        app:layout_constraintStart_toEndOf="@+id/appTrack2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/appTrack2"
+        android:layout_width="60dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal"
+        android:text="IOS"
+        android:textColor="#FD34B59B"
+        app:layout_constraintBottom_toTopOf="@+id/btnDetail3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/writing3"
+        android:layout_width="183dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/roboto_black"
+        android:gravity="center"
+        android:text="UNITY 팁 몇가지 알려줄게!"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDetail3"
+        app:layout_constraintStart_toEndOf="@+id/appTrack3"
+        app:layout_constraintTop_toTopOf="@+id/btnDetail3" />
+
+    <TextView
+        android:id="@+id/appTrack3"
+        android:layout_width="60dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="11dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal"
+        android:text="UNITY"
+        android:textColor="#9F9B9B"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDetail3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnDetail3" />
 
     <TextView
         android:id="@+id/goodCount"
@@ -156,41 +282,70 @@
         app:layout_constraintTop_toTopOf="@+id/linearLayout"
         tools:ignore="MissingConstraints" />
 
+    <TextView
+        android:id="@+id/goodCount2"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="2dp"
+        android:gravity="center"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDetail2"
+        app:layout_constraintStart_toEndOf="@+id/btnGood2"
+        app:layout_constraintTop_toTopOf="@+id/btnDetail2"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/goodCount3"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="2dp"
+        android:gravity="center"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDetail3"
+        app:layout_constraintStart_toEndOf="@+id/btnGood3"
+        app:layout_constraintTop_toTopOf="@+id/btnDetail3"
+        tools:ignore="MissingConstraints" />
+
+
     <ImageButton
         android:id="@+id/myprofile"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/rounded_background"
         android:clipToOutline="true"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="20dp"
+        android:scaleType="center"
         app:layout_constraintBottom_toTopOf="@+id/search"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@drawable/snake_sparta" />
 
     <ImageButton
         android:id="@+id/userprofile"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/rounded_background_small"
         android:clipToOutline="true"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="20dp"
+        android:scaleType="centerInside"
         app:layout_constraintBottom_toTopOf="@+id/search"
         app:layout_constraintEnd_toStartOf="@+id/myprofile"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@drawable/rabbit_sparta" />
 
     <ImageButton
         android:id="@+id/userprofile2"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/rounded_background_small"
         android:clipToOutline="true"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="20dp"
+        android:rotationX="-1"
+        android:scaleType="centerInside"
         app:layout_constraintBottom_toTopOf="@+id/search"
         app:layout_constraintEnd_toStartOf="@+id/userprofile"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@drawable/chicken_sparta" />
 
     <ImageView
         android:id="@+id/btnGood"
@@ -203,10 +358,31 @@
         app:srcCompat="@drawable/good" />
 
     <ImageView
+        android:id="@+id/btnGood2"
+        android:layout_width="27dp"
+        android:layout_height="19dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDetail2"
+        app:layout_constraintEnd_toStartOf="@+id/last2"
+        app:layout_constraintTop_toTopOf="@+id/btnDetail2"
+        app:srcCompat="@drawable/good" />
+
+    <ImageView
+        android:id="@+id/btnGood3"
+        android:layout_width="27dp"
+        android:layout_height="19dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDetail3"
+        app:layout_constraintEnd_toStartOf="@+id/last3"
+        app:layout_constraintTop_toTopOf="@+id/btnDetail3"
+        app:srcCompat="@drawable/good" />
+
+    <ImageView
         android:id="@+id/rdglasses"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="30dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/search"
         app:layout_constraintStart_toStartOf="@+id/search"
         app:layout_constraintTop_toTopOf="@+id/search"
@@ -238,6 +414,49 @@
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+    <Button
+        android:id="@+id/btnDetail2"
+        android:layout_width="408dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="2dp"
+        android:background="#00000000"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/btnDetail3"
+        android:layout_width="408dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="2dp"
+        android:background="#00000000"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/btnDetail2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="94dp"
+        android:layout_height="22dp"
+        android:layout_marginBottom="10dp"
+        android:background="#5AB620"
+        android:fontFamily="@font/roboto_black"
+        android:gravity="center"
+        android:text="현재 접속자 : 3"
+        app:layout_constraintBottom_toTopOf="@+id/userprofile2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="26dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="27dp"
+        android:gravity="center"
+        android:text="MY"
+        app:layout_constraintBottom_toTopOf="@+id/view5"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
