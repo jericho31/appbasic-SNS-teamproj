@@ -26,7 +26,7 @@
         android:id="@+id/btn_languageSetting"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="180dp"
         android:gravity="center"
         android:text="@string/txt_languageSetting"
         android:textColor="@color/white"
