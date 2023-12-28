@@ -48,12 +48,12 @@
         android:layout_height="45dp"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="35dp"
-        android:background="#ADFFFFFF"
         android:fontFamily="@font/roboto_black"
         android:text="코딩이야기"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:background="@drawable/selector_button"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
@@ -65,8 +65,7 @@
         android:layout_height="45dp"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="35dp"
-        android:background="#ADFFFFFF"
-
+        android:background="@drawable/selector_button"
         android:fontFamily="@font/roboto_black"
         android:text="일상"
         android:textColor="#040000"
@@ -96,6 +95,7 @@
         android:hint="관심있는 내용을 검색해보세요!"
         android:inputType="text"
         android:maxLines="1"
+
         app:layout_constraintBottom_toTopOf="@+id/daily"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -158,8 +158,10 @@
 
     <ImageButton
         android:id="@+id/myprofile"
-        android:layout_width="117dp"
-        android:layout_height="113dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/rounded_background"
+        android:clipToOutline="true"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/search"
@@ -168,8 +170,10 @@
 
     <ImageButton
         android:id="@+id/userprofile"
-        android:layout_width="68dp"
-        android:layout_height="68dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/rounded_background_small"
+        android:clipToOutline="true"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/search"
@@ -178,8 +182,10 @@
 
     <ImageButton
         android:id="@+id/userprofile2"
-        android:layout_width="68dp"
-        android:layout_height="68dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/rounded_background_small"
+        android:clipToOutline="true"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/search"
@@ -224,14 +230,14 @@
         tools:layout_editor_absoluteX="-1dp" />
 
     <Button
-        android:id="@+id/btn_logIn2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/btnDetail"
+        android:layout_width="408dp"
+        android:layout_height="43dp"
+        android:background="#00000000"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
