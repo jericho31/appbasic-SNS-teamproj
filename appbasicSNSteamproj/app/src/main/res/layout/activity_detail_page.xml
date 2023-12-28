@@ -267,12 +267,13 @@
             android:layout_marginBottom="0dp"
             android:background="#66A32579"
             android:backgroundTint="#FFFF00"
-            android:gravity="center|start"
+            android:gravity="center|clip_vertical|left"
             android:text="유익해요!"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#B81B9E"
             android:textColorHighlight="#290707"
             android:textColorLink="#CF2C2C"
-            android:textSize="14sp" />
+            android:textSize="15sp" />
 
         <ImageView
             android:id="@+id/imageView10"
