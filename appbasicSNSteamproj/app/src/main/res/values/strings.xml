@@ -36,14 +36,14 @@
 <!--    <string name="KOR_logInButton">로그인</string>-->
 <!--    <string name="KOR_signUpButton">회원가입</string>-->
 <!--    <string name="KOR_signUpQuestion">처음이용하시는건가요?</string>-->
-<!--    <string name="lng_btn_check">확인</string>-->
-<!--    <string name="my_page_postname" translatable="false">스파르타 친구들 새해 잘 보내!</string>-->
-<!--    <string name="my_page_trackname" translatable="false">Android</string>-->
-<!--    <string name="my_page_time">1일전</string>-->
-<!--    <string name="my_page_post">작성글</string>-->
-<!--    <string name="my_page_comment">작성댓글</string>-->
-<!--    <string name="my_page_commentingpost">댓글단 글</string>-->
-<!--    <string name="my_page_markingpost">좋아요한 글</string>-->
+    <string name="lng_btn_check">확인</string>
+    <string name="my_page_postname" translatable="false">스파르타 친구들 새해 잘 보내!</string>
+    <string name="my_page_trackname" translatable="false">Android</string>
+    <string name="my_page_time">1일전</string>
+    <string name="my_page_post">작성글</string>
+    <string name="my_page_comment">작성댓글</string>
+    <string name="my_page_commentingpost">댓글단 글</string>
+    <string name="my_page_markingpost">좋아요한 글</string>
 
 <!--    <string name="app_name" translatable="false">appbasic-SNS-teamproj</string>-->
 <!--    <string name="profil_txt_track">트랙</string>-->
