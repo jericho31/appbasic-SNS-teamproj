@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfilActivity">
+    tools:context=".MyPageActivity">
 
     <ImageView
         android:id="@+id/iv_profil"
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:gravity="center"
-        android:text="@string/profil_btn_setting"
+        android:text="@string/txt_languageSetting"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -37,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="@string/profil_txt_track"
+        android:text="@string/txt_track"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="@string/profil_txt_id"
+        android:text="@string/txt_id"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,7 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:gravity="center"
-        android:text="@string/profil_btn_revise"
+        android:text="@string/txt_modify"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -76,7 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:gravity="center"
-        android:text="@string/profil_btn_withdraw"
+        android:text="@string/txt_withdraw"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"

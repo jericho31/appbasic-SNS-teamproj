@@ -1,5 +1,6 @@
 package com.example.appbasic_sns_teamproj
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -133,13 +134,16 @@ class SignUpActivity : AppCompatActivity() {
         arrET.forEach { it.onFocusChangeListener = onFocusChangeListener }
 
         btn.setOnClickListener {
+            val intent_sendIdPwToSignIn = Intent(this, SignInActivity::class.java)
+            val etPw_text = etPw.text
             if (spinner.isVisible) {
-                intent.putExtra(Extra.id, "${etMail.text}@${spinner.selectedItem}")
+                intent_sendIdPwToSignIn.putExtra(Extra.id, "${etMail.text}@${spinner.selectedItem}")
             } else {
-                intent.putExtra(Extra.id, "${etMail.text}@${etDomain.text}")
+                intent_sendIdPwToSignIn.putExtra(Extra.id, "${etMail.text}@${etDomain.text}")
             }
-            intent.putExtra(Extra.password, etPw.text.toString())
-            setResult(RESULT_OK, intent)
+            intent_sendIdPwToSignIn.putExtra(Extra.password, etPw_text.toString())
+//            Log.d("ASDFFF", "id = ${Extra.id}")
+            setResult(RESULT_OK, intent_sendIdPwToSignIn)
             finish()
         }
 
@@ -158,6 +162,8 @@ class SignUpActivity : AppCompatActivity() {
 
                 override fun onNothingSelected(parent: AdapterView<*>?) {}
             }
+
+
     }
 
     private var checkCount = 0  // for debug

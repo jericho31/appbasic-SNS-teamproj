@@ -20,6 +20,5 @@ class LanguageSettingActivity : AppCompatActivity() {
             finish()
         }
 
-
     }
 }

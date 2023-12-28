@@ -16,10 +16,10 @@
             android:name=".LanguageSettingActivity"
             android:exported="false" />
         <activity
-            android:name=".ProfilActivity"
+            android:name=".MyPageActivity"
             android:exported="true" />
         <activity
-            android:name=".MyPageActivity"
+            android:name=".DetailPageActivity"
             android:exported="false" />
         <activity
             android:name=".SignUpActivity"
@@ -36,6 +36,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
