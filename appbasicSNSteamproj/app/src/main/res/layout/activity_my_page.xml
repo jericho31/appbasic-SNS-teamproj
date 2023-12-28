@@ -32,8 +32,8 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_id"/>
-<!--        app:layout_constraintTop_toBottomOf="@+id/linearLayout"-->
+        app:layout_constraintTop_toBottomOf="@id/txt_id"/>
+<!--        app:layout_constraintTop_toBottomOf="@id/linearLayout"-->
 
     <TextView
         android:id="@+id/txt_track"
@@ -44,7 +44,7 @@
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/iv_profil"
+        app:layout_constraintStart_toEndOf="@id/iv_profil"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -55,12 +55,12 @@
         android:text="@string/txt_id"
         android:textSize="22sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/txt_track"
-        app:layout_constraintStart_toStartOf="@+id/txt_track"
-        app:layout_constraintTop_toBottomOf="@+id/txt_track" />
+        app:layout_constraintEnd_toEndOf="@id/txt_track"
+        app:layout_constraintStart_toStartOf="@id/txt_track"
+        app:layout_constraintTop_toBottomOf="@id/txt_track" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@id/linearLayout"
         android:layout_width="410dp"
         android:layout_height="50dp"
         android:layout_marginTop="90dp"
@@ -69,7 +69,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_profil"
+        app:layout_constraintTop_toBottomOf="@id/iv_profil"
         tools:ignore="MissingConstraints">
 
         <Button
@@ -93,9 +93,9 @@
         android:layout_width="27dp"
         android:layout_height="19dp"
         android:layout_marginEnd="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-        app:layout_constraintEnd_toStartOf="@+id/last"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        app:layout_constraintBottom_toBottomOf="@id/linearLayout"
+        app:layout_constraintEnd_toStartOf="@id/last"
+        app:layout_constraintTop_toTopOf="@id/linearLayout"
         app:srcCompat="@drawable/good" />
 
     <TextView
@@ -107,9 +107,9 @@
         android:gravity="center"
         android:text="@string/my_page_time"
         android:textIsSelectable="false"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintBottom_toBottomOf="@id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+        app:layout_constraintTop_toTopOf="@id/linearLayout" />
 
     <TextView
         android:id="@+id/apptrack"
@@ -121,9 +121,9 @@
         android:gravity="center_horizontal"
         android:text="@string/my_page_trackname"
         android:textColor="#9F9B9B"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+        app:layout_constraintBottom_toBottomOf="@id/linearLayout"
+        app:layout_constraintStart_toStartOf="@id/linearLayout"
+        app:layout_constraintTop_toTopOf="@id/linearLayout" />
 
     <TextView
         android:id="@+id/writing"
@@ -135,9 +135,9 @@
         android:fontFamily="@font/roboto_black"
         android:gravity="center"
         android:text="@string/my_page_postname"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-        app:layout_constraintStart_toEndOf="@+id/apptrack"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        app:layout_constraintBottom_toBottomOf="@id/linearLayout"
+        app:layout_constraintStart_toEndOf="@id/apptrack"
+        app:layout_constraintTop_toTopOf="@id/linearLayout"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -147,9 +147,9 @@
         android:layout_marginStart="2dp"
         android:gravity="center"
         android:text="0"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-        app:layout_constraintStart_toEndOf="@+id/btnGood"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        app:layout_constraintBottom_toBottomOf="@id/linearLayout"
+        app:layout_constraintStart_toEndOf="@id/btnGood"
+        app:layout_constraintTop_toTopOf="@id/linearLayout"
         tools:ignore="MissingConstraints" />
 
     <View
@@ -158,7 +158,7 @@
         android:layout_height="1dp"
         android:layout_marginTop="3dp"
         android:background="@android:color/black"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout"
         tools:layout_editor_absoluteX="-16dp" />
 
     <View
@@ -166,7 +166,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/black"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout"
         tools:layout_editor_absoluteX="-1dp" />
 
     <Button
@@ -181,7 +181,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_languageSetting" />
+        app:layout_constraintTop_toBottomOf="@id/btn_languageSetting" />
 
     <Button
         android:id="@+id/btn_withdraw"
@@ -195,7 +195,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_modifyInfo" />
+        app:layout_constraintTop_toBottomOf="@id/btn_modifyInfo" />
 
     <ImageView
         android:id="@+id/iv_return"
@@ -214,11 +214,11 @@
         android:text="@string/my_page_post"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/txt_myComments"
+        app:layout_constraintEnd_toStartOf="@id/txt_myComments"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_profil" />
+        app:layout_constraintTop_toBottomOf="@id/iv_profil" />
 
     <TextView
         android:id="@+id/txt_myComments"
@@ -227,10 +227,10 @@
         android:layout_marginTop="50dp"
         android:text="@string/my_page_comment"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/txt_thePostIComment"
+        app:layout_constraintEnd_toStartOf="@id/txt_thePostIComment"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/txt_myPost"
-        app:layout_constraintTop_toBottomOf="@+id/iv_profil" />
+        app:layout_constraintStart_toEndOf="@id/txt_myPost"
+        app:layout_constraintTop_toBottomOf="@id/iv_profil" />
 
     <TextView
         android:id="@+id/txt_thePostIComment"
@@ -239,10 +239,10 @@
         android:layout_marginTop="50dp"
         android:text="@string/my_page_commentingpost"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/txt_thePostIGood"
+        app:layout_constraintEnd_toStartOf="@id/txt_thePostIGood"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/txt_myComments"
-        app:layout_constraintTop_toBottomOf="@+id/iv_profil" />
+        app:layout_constraintStart_toEndOf="@id/txt_myComments"
+        app:layout_constraintTop_toBottomOf="@id/iv_profil" />
 
     <TextView
         android:id="@+id/txt_thePostIGood"
@@ -253,7 +253,7 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/txt_thePostIComment"
-        app:layout_constraintTop_toBottomOf="@+id/iv_profil" />
+        app:layout_constraintStart_toEndOf="@id/txt_thePostIComment"
+        app:layout_constraintTop_toBottomOf="@id/iv_profil" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

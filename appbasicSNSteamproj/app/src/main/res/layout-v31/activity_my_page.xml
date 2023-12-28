@@ -30,7 +30,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_id" />
+        app:layout_constraintTop_toBottomOf="@id/txt_id" />
 
     <TextView
         android:id="@+id/txt_track"
@@ -42,7 +42,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_profil" />
+        app:layout_constraintTop_toBottomOf="@id/iv_profil" />
 
     <TextView
         android:id="@+id/txt_id"
@@ -54,7 +54,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_track" />
+        app:layout_constraintTop_toBottomOf="@id/txt_track" />
 
     <Button
         android:id="@+id/btn_modifyInfo"
@@ -68,7 +68,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_languageSetting" />
+        app:layout_constraintTop_toBottomOf="@id/btn_languageSetting" />
 
     <Button
         android:id="@+id/btn_withdraw"
@@ -82,6 +82,6 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_modifyInfo" />
+        app:layout_constraintTop_toBottomOf="@id/btn_modifyInfo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
