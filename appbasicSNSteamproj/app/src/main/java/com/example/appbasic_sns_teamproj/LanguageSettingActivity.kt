@@ -1,5 +1,6 @@
 package com.example.appbasic_sns_teamproj
 
+import android.hardware.biometrics.BiometricManager.Strings
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton

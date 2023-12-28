@@ -31,12 +31,13 @@ class MainPageActivity : AppCompatActivity() {
 //            goodcount++
 //            goodCount.text = goodCount.toString()
 
-        val logInButton:Button = findViewById(R.id.button)
+
+    */
+        val logInButton: Button = findViewById(R.id.button)
         logInButton.setOnClickListener {
             val intent = Intent(this, SignInActivity::class.java)
             startActivity(intent)
         }
-    */
 
 
         val btnDetail: Button = findViewById(R.id.btnDetail)
@@ -45,8 +46,8 @@ class MainPageActivity : AppCompatActivity() {
             // 글 클릭시 디테일로 이동
 
 
-        }
     }
+}
     private fun detail() {
         val appTrackText: String = apptrack.text.toString()
 
