@@ -122,6 +122,8 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
+        this.setSlide(Direction.RIGHT, Direction.STAY)
+
         // 처음에 기본으로 첫번째꺼가 선택되어 있는 이유는 어레이어댑터라서 그런가?
         spinner.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, mails)
 
@@ -162,6 +164,12 @@ class SignUpActivity : AppCompatActivity() {
             }
 
 
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+
+        setSlide(Direction.STAY, Direction.RIGHT)
     }
 
     private var checkCount = 0  // for debug
