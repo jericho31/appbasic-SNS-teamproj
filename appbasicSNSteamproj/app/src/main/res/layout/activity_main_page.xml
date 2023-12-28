@@ -55,7 +55,7 @@
         style="@style/Widget.Material3.MaterialTimePicker.Display.HelperText"
         android:layout_width="66dp"
         android:layout_height="33dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="30dp"
         android:layout_marginBottom="40dp"
         android:background="#F44336"
         android:fontFamily="@font/roboto_black"
@@ -313,7 +313,7 @@
 
 
     <ImageButton
-        android:id="@+id/myprofile"
+        android:id="@+id/myProfile"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginEnd="30dp"
@@ -334,17 +334,17 @@
         android:background="@drawable/rounded_background"
         android:clipToOutline="true"
         android:scaleType="centerInside"
-        app:layout_constraintBottom_toTopOf="@id/search"
-        app:layout_constraintEnd_toStartOf="@id/myprofile"
+        app:layout_constraintBottom_toTopOf="@+id/search"
+        app:layout_constraintEnd_toStartOf="@+id/myProfile"
         app:srcCompat="@drawable/rabbit_sparta" />
 
     <ImageButton
         android:id="@+id/userprofile2"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginBottom="12dp"
-        android:background="@drawable/rounded_background"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/rounded_background_small"
         android:clipToOutline="true"
         android:rotationX="-1"
         android:scaleType="centerInside"
@@ -464,12 +464,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="9dp" />
+        andr
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

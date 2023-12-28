@@ -70,7 +70,7 @@
 
     <TextView
         android:id="@+id/dtAppTrack"
-        android:layout_width="62dp"
+        android:layout_width="70dp"
         android:layout_height="24dp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="2dp"
