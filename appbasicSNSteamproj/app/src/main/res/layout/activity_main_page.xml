@@ -82,6 +82,11 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints">
 
+        <Button
+            android:id="@+id/btnDetail6"
+            android:layout_width="408dp"
+            android:layout_height="43dp"
+            android:background="#00000000" />
     </LinearLayout>
 
 
@@ -92,12 +97,12 @@
         android:layout_height="45dp"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="35dp"
-        android:background="@drawable/selector_button"
         android:fontFamily="@font/roboto_black"
         android:text="코딩이야기"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:background="@drawable/selector_button"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
@@ -457,6 +462,14 @@
         android:text="MY"
         app:layout_constraintBottom_toTopOf="@+id/view5"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="9dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
