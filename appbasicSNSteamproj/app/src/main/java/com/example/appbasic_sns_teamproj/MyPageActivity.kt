@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.res.ResourcesCompat
@@ -16,10 +17,10 @@ class MyPageActivity : AppCompatActivity() {
         val tv_track = findViewById<TextView>(R.id.txt_track)
         val tv_id = findViewById<TextView>(R.id.txt_id)
         if (intent.hasExtra("track")) {
-            tv_track.text = "트랙 : "+ intent.getStringExtra("track")
+            tv_track.text = "트랙 : " + intent.getStringExtra("track")
         }
         if (intent.hasExtra("id")) {
-            tv_id.text = "아이디 : "+ intent.getStringExtra("id")
+            tv_id.text = "아이디 : " + intent.getStringExtra("id")
 
         }
 
@@ -37,19 +38,19 @@ class MyPageActivity : AppCompatActivity() {
         val btnBackToMain = findViewById<ImageView>(R.id.iv_return)
         val btnGoToDetail = findViewById<Button>(R.id.btn_goDetail)
 
-        btnLanguageSetting.setOnClickListener{
+        btnLanguageSetting.setOnClickListener {
             val intent = Intent(this, LanguageSettingActivity::class.java)
             startActivity(intent)
         }
 
-        btnBackToMain.setOnClickListener{
+        btnBackToMain?.setOnClickListener {
             finish()
         }
 
-        btnGoToDetail.setOnClickListener{
+        btnGoToDetail.setOnClickListener {
             val intent = Intent(this, DetailPageActivity::class.java)
             startActivity(intent)
         }
 
+        }
     }
-}
