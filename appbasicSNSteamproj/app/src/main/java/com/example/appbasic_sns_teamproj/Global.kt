@@ -10,5 +10,5 @@ object Extra {
 object User {
     var isSignedIn = false
     var id = ""
-//    var locale = LocaleConfig()
+    var isKorean = true
 }
