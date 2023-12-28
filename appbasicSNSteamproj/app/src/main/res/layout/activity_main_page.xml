@@ -38,6 +38,11 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints">
 
+        <Button
+            android:id="@+id/btnDetail6"
+            android:layout_width="408dp"
+            android:layout_height="43dp"
+            android:background="#00000000" />
     </LinearLayout>
 
 
