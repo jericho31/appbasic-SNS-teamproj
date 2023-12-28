@@ -166,6 +166,12 @@ class SignUpActivity : AppCompatActivity() {
 
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+
+        setSlide(Direction.STAY, Direction.RIGHT)
+    }
+
     private var checkCount = 0  // for debug
     fun check(v: View) {
         Log.d(
