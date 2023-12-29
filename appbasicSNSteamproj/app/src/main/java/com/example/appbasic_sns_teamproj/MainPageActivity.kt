@@ -49,17 +49,14 @@ class MainPageActivity : AppCompatActivity() {
             if (User.isSignedIn) {
                 Log.d("MyApp", "User is signed in: ${User.isSignedIn}")
                 // 로그인 상태일 때
-                // 로그인 상태에 따른 아이콘/프로필 이미지 설정
-                myProfile.setImageResource(R.drawable.snake_sparta)
+                // 이미지 변경은 버튼 클릭할 때가 아니라, 로그인 성공했을 때 해줘야 함.
+                // onResume에 일단 만듦.
 
                 // 프로필 이미지 클릭 시 마이페이지로 이동
                 val intent = Intent(this, MyPageActivity::class.java)
                 startActivity(intent)
             } else {
                 // 비로그인 상태일 때
-                // 비로그인 상태에 따른 아이콘/프로필 이미지 설정
-                myProfile.setImageResource(R.drawable.ic_sparta)
-
                 // 프로필 이미지 클릭 시 로그인 페이지로 이동
                 val intent = Intent(this, SignInActivity::class.java)
                 startActivity(intent)
@@ -68,8 +65,13 @@ class MainPageActivity : AppCompatActivity() {
 
     }
 
+    override fun onResume() {
+        super.onResume()
 
-
+        // 로그인 페이지에서 돌아와서 로그인이 성공했으면 이미지 변경.
+        // 정석은 registerLauncher.launch(intent) 해서 로그인 성공 여부를 돌려받고 해야함.
+        if (User.isSignedIn) myProfile.setImageResource(R.drawable.snake_sparta)
+    }
 
 
         /*

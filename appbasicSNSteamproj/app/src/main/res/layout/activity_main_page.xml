@@ -399,7 +399,7 @@
         android:scaleType="center"
         app:layout_constraintBottom_toTopOf="@id/search"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/snake_sparta" />
+        app:srcCompat="@drawable/login" />
 
     <ImageButton
         android:id="@+id/userprofile"
