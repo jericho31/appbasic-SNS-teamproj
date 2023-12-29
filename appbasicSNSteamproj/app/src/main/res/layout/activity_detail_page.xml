@@ -51,23 +51,6 @@
     <!--    The value of attribute "android:text" associated with an element type "Button" must not contain the '<' character.-->
 
 
-    <View
-        android:id="@+id/view11"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/black"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"
-        tools:layout_editor_absoluteX="2dp" />
-
-    <View
-        android:id="@+id/view12"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="64dp"
-        android:background="@android:color/black"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"
-        tools:layout_editor_absoluteX="-80dp" />
-
     <Button
         android:id="@+id/btnBack"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
@@ -236,172 +219,327 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="191dp"
-        android:layout_height="84dp"
-        android:padding="16dp"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13">
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="191dp"
+                android:layout_height="84dp"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
 
-        <TextView
-            android:id="@+id/textViewLikeCount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/buttonLike"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="18dp"
-            android:layout_marginEnd="6dp"
-            android:layout_marginBottom="14dp"
-            android:gravity="center|end"
-            android:text="0"
-            android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/textViewLikeCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/buttonLike"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="14dp"
+                    android:gravity="center|end"
+                    android:text="0"
+                    android:textSize="16sp" />
 
-        <Button
-            android:id="@+id/buttonLike"
-            android:layout_width="140dp"
-            android:layout_height="68dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="0dp"
-            android:background="#66A32579"
-            android:backgroundTint="#FFFF00"
-            android:gravity="center|start|left"
-            android:text="유익해요!"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:textColor="#B81B9E"
-            android:textColorHighlight="#290707"
-            android:textColorLink="#CF2C2C"
-            android:textSize="18sp" />
+                <Button
+                    android:id="@+id/buttonLike"
+                    android:layout_width="140dp"
+                    android:layout_height="68dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="#66A32579"
+                    android:gravity="center|start|left"
+                    android:text="유익해요!"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="#B81B9E"
+                    android:textSize="18sp" />
 
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="33dp"
-            android:layout_height="30dp"
-            android:layout_alignTop="@+id/buttonLike"
-            android:layout_alignEnd="@+id/buttonLike"
-            android:layout_alignBottom="@+id/buttonLike"
-            android:layout_marginTop="2dp"
-            android:layout_marginEnd="13dp"
-            android:layout_marginBottom="2dp"
-            app:srcCompat="@drawable/good2" />
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="33dp"
+                    android:layout_height="30dp"
+                    android:layout_alignTop="@+id/buttonLike"
+                    android:layout_alignEnd="@+id/buttonLike"
+                    android:layout_alignBottom="@+id/buttonLike"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginBottom="2dp"
+                    app:srcCompat="@drawable/good2" />
 
-    </RelativeLayout>
+            </RelativeLayout>
 
-    <LinearLayout
-        android:id="@+id/commentSection"
-        android:layout_width="360dp"
-        android:layout_height="56dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+            <LinearLayout
+                android:id="@+id/commentSection"
+                android:layout_width="360dp"
+                android:layout_height="56dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
 
-        <EditText
-            android:id="@+id/editTextComment"
-            android:layout_width="230dp"
-            android:layout_height="wrap_content"
-            android:hint="댓글을 적어주세요."
-            android:textSize="24sp" />
+                <EditText
+                    android:id="@+id/editTextComment"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:hint="댓글을 적어주세요."
+                    android:textSize="24sp" />
 
-    </LinearLayout>
-
-
-    <Button
-        android:id="@+id/buttonPostComment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="댓글 등록"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/commentSection"
-        app:layout_constraintEnd_toEndOf="@+id/commentSection"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+            </LinearLayout>
 
 
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="343dp"
-        android:layout_height="60dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:fontFamily="@font/roboto_black"
-        android:gravity="center|start"
-        android:text="잘쉬고 다음주에 봐!"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/commentSection" />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="244dp"
-        android:layout_height="71dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:fontFamily="@font/roboto_black"
-        android:gravity="center|start"
-        android:text="고마워!"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view11" />
-
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="32dp"
-        android:layout_height="30dp"
-        android:rotation="-178"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view11"
-        app:srcCompat="@drawable/ic_back" />
-
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="70dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view12"
-        app:layout_constraintStart_toStartOf="@+id/textView16"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"
-        app:layout_constraintVertical_bias="0.633"
-        app:srcCompat="@drawable/btn_drawable_selector" />
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="76dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="20dp"
-        android:gravity="center"
-        android:text="Android"
-        android:textColor="#43A047"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView14"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView14" />
-
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="76dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="20dp"
-        android:gravity="center"
-        android:text="Android"
-        android:textColor="#43A047"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView16"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView16" />
+            <Button
+                android:id="@+id/buttonPostComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="댓글 등록"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/commentSection"
+                app:layout_constraintEnd_toEndOf="@+id/commentSection"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
 
 
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="343dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center|start"
+                android:text="잘쉬고 다음주에 봐!"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView11"
+                app:layout_constraintTop_toBottomOf="@+id/commentSection" />
 
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="244dp"
+                android:layout_height="71dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center|start"
+                android:text="고마워!"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView11"
+                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="280dp"
+                android:layout_height="71dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center|start"
+                android:text="매니저님들도고생하셨어요!"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="280dp"
+                android:layout_height="71dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center|start"
+                android:text="Unity도 화이팅!"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView9"
+                app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="280dp"
+                android:layout_height="71dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center|start"
+                android:text="IOS 화이팅!"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="32dp"
+                android:layout_height="30dp"
+                android:rotation="-178"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView14"
+                app:srcCompat="@drawable/ic_back" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="32dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="1dp"
+                android:rotation="-178"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView16"
+                app:srcCompat="@drawable/ic_back" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="32dp"
+                android:layout_height="30dp"
+                android:rotation="-178"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView21"
+                app:srcCompat="@drawable/ic_back" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="70dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView16"
+                app:layout_constraintStart_toStartOf="@+id/textView16"
+                app:layout_constraintTop_toTopOf="@+id/textView16"
+                app:srcCompat="@drawable/btn_drawable_selector" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="76dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:text="Android"
+                android:textColor="#43A047"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView14" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="76dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:text="Android"
+                android:textColor="#43A047"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView16" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="76dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="27dp"
+                android:gravity="center"
+                android:text="AI"
+                android:textColor="#FF2058B8"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView19"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView19" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="76dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:text="IOS"
+                android:textColor="#FD34B59B"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView23"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView23" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="76dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:text="Unity"
+                android:textColor="#FF9F9B9B"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView21"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView21" />
+
+            <View
+                android:id="@+id/view12"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+
+                android:background="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@+id/textView14"
+                tools:layout_editor_absoluteX="26dp" />
+
+            <View
+                android:id="@+id/view11"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"
+
+                app:layout_constraintTop_toBottomOf="@+id/textView16"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <View
+                android:id="@+id/view13"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+
+                android:background="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@+id/textView19"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <View
+                android:id="@+id/view14"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+
+                android:background="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@+id/textView23"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <View
+                android:id="@+id/view15"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+
+                android:background="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@+id/textView21"
+                tools:layout_editor_absoluteX="0dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

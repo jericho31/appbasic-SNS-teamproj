@@ -46,7 +46,8 @@ class SignInActivity : AppCompatActivity() {
                 Toast.makeText(this, "환영합니다", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, MainPageActivity::class.java)
                 startActivity(intent)
-
+                
+                // 유저 값 설정 - LYJ
                 CurrentUser.user = DB.users[id]
             }
         }
