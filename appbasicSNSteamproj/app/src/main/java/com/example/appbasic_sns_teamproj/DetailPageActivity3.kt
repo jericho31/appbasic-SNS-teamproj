@@ -23,7 +23,7 @@ class DetailPageActivity3 : AppCompatActivity() {
         val buttonLike = findViewById<Button>(R.id.buttonLike)
         val textViewLikeCount = findViewById<TextView>(R.id.textViewLikeCount)
 
-
+        this.setSlide(Direction.UP, Direction.STAY)
 
 
         buttonLike.setOnClickListener {
@@ -43,6 +43,12 @@ class DetailPageActivity3 : AppCompatActivity() {
             val intent = Intent(this@DetailPageActivity3, MainPageActivity::class.java)
             startActivity(intent)
         }
+    }
+    override fun onBackPressed() {
+        super.onBackPressed()
+
+        setSlide(Direction.STAY, Direction.UP)
+        // 뒤로가기 버튼 말고 휴대폰에서 Back 버튼 해야 함.
     }
 }
 
