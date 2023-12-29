@@ -1,6 +1,5 @@
 package com.example.appbasic_sns_teamproj
 
-import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -41,6 +40,7 @@ class SignUpActivity : AppCompatActivity() {
     companion object {
         // 나중엔 서버에서 받아오는 식.
         val mails = arrayOf("gmail.com", "kakao.com", "naver.com", "직접 입력")
+        val tracks = arrayOf("Android", "iOS", "Unity", "기타")
     }
 
     private val etName: EditText by lazy { findViewById(R.id.et_chall_name) }
@@ -51,13 +51,13 @@ class SignUpActivity : AppCompatActivity() {
     private val etPw: EditText by lazy { findViewById(R.id.et_chall_password) }
     private val tvPwWarn: TextView by lazy { findViewById(R.id.tv_chall_password_warn) }
     private val tvPwLength: TextView by lazy { findViewById(R.id.tv_chall_password_length) }
-    private val etVerify: EditText by lazy { findViewById(R.id.et_chall_verify) }
     private val tvVerifyWarn: TextView by lazy { findViewById(R.id.tv_chall_verify_warn) }
     private val btn: Button by lazy { findViewById(R.id.btn_chall_signup) }
-    private val spinner: Spinner by lazy { findViewById(R.id.spnr_chall_mail) }
+    private val spinner: Spinner by lazy { findViewById(R.id.spinner_chall_mail) }
+    private val spinnerTrack: Spinner by lazy { findViewById(R.id.spinner_signUp_track) }
 
     // EditText 배열
-    private val arrET by lazy { arrayOf(etName, etMail, etDomain, etPw, etVerify) }
+    private val arrET by lazy { arrayOf(etName, etMail, etDomain, etPw) }
 
     private var okName = false
     private var okMail = false
@@ -65,7 +65,6 @@ class SignUpActivity : AppCompatActivity() {
     // TODO: [jericho] okDomain이랑 스피너 visible 두 조건 어떻게 잘 좀 통합
     private var okDomain = false
     private var okPw = false
-    private var okVerify = false
 
     private val anim = AlphaAnimation(0.125f, 0.625f).apply {
         duration = 100L
@@ -126,6 +125,8 @@ class SignUpActivity : AppCompatActivity() {
 
         // 처음에 기본으로 첫번째꺼가 선택되어 있는 이유는 어레이어댑터라서 그런가?
         spinner.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, mails)
+        spinnerTrack.adapter =
+            ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, tracks)
 
         arrET.forEach { et -> if ((et == etPw).not()) et.addTextChangedListener { check(et) } }
         etPw.addTextChangedListener(pwWatcher)
@@ -134,16 +135,25 @@ class SignUpActivity : AppCompatActivity() {
         arrET.forEach { it.onFocusChangeListener = onFocusChangeListener }
 
         btn.setOnClickListener {
-            val intent_sendIdPwToSignIn = Intent(this, SignInActivity::class.java)
-            val etPw_text = etPw.text
-            if (spinner.isVisible) {
-                intent_sendIdPwToSignIn.putExtra(Extra.id, "${etMail.text}@${spinner.selectedItem}")
+            var id = if (spinner.isVisible) {
+                "${etMail.text}@${spinner.selectedItem}"
             } else {
-                intent_sendIdPwToSignIn.putExtra(Extra.id, "${etMail.text}@${etDomain.text}")
+                "${etMail.text}@${etDomain.text}"
             }
-            intent_sendIdPwToSignIn.putExtra(Extra.password, etPw_text.toString())
-//            Log.d("ASDFFF", "id = ${Extra.id}")
-            setResult(RESULT_OK, intent_sendIdPwToSignIn)
+            intent.putExtra(Extra.id, "${etMail.text}@${spinner.selectedItem}")
+            intent.putExtra(Extra.password, etPw.text.toString())
+            intent.putExtra("track", spinnerTrack.selectedItem.toString())
+
+            // DB에 유저 넣기
+            val newUser = User(
+                id,
+                etPw.text.toString(),
+                etName.text.toString(),
+                spinnerTrack.selectedItem.toString()
+            )
+            DB.users[newUser.id] = newUser
+
+            setResult(RESULT_OK, intent)
             finish()
         }
 
@@ -223,19 +233,9 @@ class SignUpActivity : AppCompatActivity() {
                     okPw = true
                 }
             }
-
-            etVerify -> {
-                if (etVerify.text.contentEquals(etPw.text)) {
-                    tvVerifyWarn.text = ""
-                    okVerify = true
-                } else {
-                    tvVerifyWarn.text = "비밀번호가 일치하지 않습니다."
-                    okVerify = false
-                }
-            }
         }
 
-        btn.isEnabled = okName && okMail && (spinner.isVisible || okDomain) && okPw && okVerify
+        btn.isEnabled = okName && okMail && (spinner.isVisible || okDomain) && okPw
     }
 
     private fun toastShort(s: String) = Toast.makeText(this, s, Toast.LENGTH_SHORT).show()

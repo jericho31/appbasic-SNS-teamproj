@@ -1,9 +1,5 @@
 package com.example.appbasic_sns_teamproj
 
-import android.content.Context
-import android.content.Intent
-import android.widget.ImageView
-
 /** intent extra name 용 */
 // 오타로 인한 휴먼 에러를 줄일 수 있다고 함.
 object Extra {
@@ -11,8 +7,17 @@ object Extra {
     const val password = "password"
 }
 
-object User {
-    var isSignedIn = false
-    var id = ""
-    var isKorean = true
+object CurrentUser {
+    var user: User? = null
+    fun isSignedIn() = user != null
+}
+
+object DB {
+    val users = mutableMapOf<String, User>(
+        // admin 기본으로 넣어둠
+        Pair(
+            "admin",
+            User("admin", "admin", "admin", "admin")
+        )
+    )
 }

@@ -6,14 +6,19 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingHorizontal="32dp"
-    android:paddingVertical="32dp"
+    android:paddingVertical="16dp"
     tools:context=".SignUpActivity">
 
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:srcCompat="@drawable/welcome" />
+
     <TextView
-        android:id="@+id/tv_"
+        android:id="@+id/tv_sign_up_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:text="@string/txt_name"
         android:textSize="18sp" />
 
@@ -37,7 +42,7 @@
         android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="@string/txt_email"
         android:textSize="18sp" />
 
@@ -75,7 +80,7 @@
             android:visibility="gone" />
 
         <Spinner
-            android:id="@+id/spnr_chall_mail"
+            android:id="@+id/spinner_chall_mail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
@@ -92,7 +97,7 @@
         android:id="@+id/textView10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="@string/txt_pw"
         android:textSize="18sp" />
 
@@ -132,18 +137,14 @@
         android:id="@+id/textView12"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="@string/txt_track"
         android:textSize="18sp" />
 
-    <EditText
-        android:id="@+id/et_chall_verify"
+    <Spinner
+        android:id="@+id/spinner_signUp_track"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:ems="10"
-        android:hint="@string/txt_track"
-        android:inputType="textPassword" />
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/tv_chall_verify_warn"
@@ -156,7 +157,7 @@
         android:id="@+id/btn_chall_signup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:enabled="false"
         android:text="@string/txt_signUp"
         android:textSize="18sp" />
