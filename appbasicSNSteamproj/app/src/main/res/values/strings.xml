@@ -29,6 +29,9 @@
     <string name="my_page_comment">작성댓글</string>
     <string name="my_page_commentingpost">댓글단 글</string>
     <string name="my_page_markingpost">좋아요한 글</string>
+    <string name="notice_content" translatable="false">어서오세요 르탄이분들!</string>
+    <string name="notice_title" translatable="false">공지</string>
+
 
 
 

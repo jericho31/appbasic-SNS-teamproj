@@ -1,5 +1,6 @@
 package com.example.appbasic_sns_teamproj
 
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +8,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import com.example.appbasic_sns_teamproj.R.layout.activity_main_page
 
 
@@ -17,7 +19,7 @@ class MainPageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(activity_main_page)
 //        현재 액티비티의 상태를 복원하고 레이아웃 파일인 activity_main_page를 화면에 표시하는 코드이다.
-
+        showNotice()
 
         appTrack = findViewById(R.id.appTrack)
         myProfile = findViewById(R.id.myProfile)
@@ -32,6 +34,8 @@ class MainPageActivity : AppCompatActivity() {
             intent.putExtra("username", appTrackText)
             startActivity(intent)
         }
+
+
 //        ID가 btnDetail인 Button을 찾아 btnDetail 변수에 할당하고,
         //        해당 버튼에 클릭 리스너를 설정한다. 버튼이 클릭되면
         //        DetailPageActivity로 이동하면서
@@ -59,17 +63,38 @@ class MainPageActivity : AppCompatActivity() {
 
     }
 
+    private fun showNotice() {
+        val noticeTitle = getString(R.string.notice_title)
+        val noticeContent = getString(R.string.notice_content)
+
+
+        val textView = TextView(this)
+        textView.text = "$noticeTitle\n\n$noticeContent"
+        // \n 은 줄 바꿈
+        textView.textSize = 10F
+
+        // AlertDialog를 사용하여 공지사항을 표시
+        AlertDialog.Builder(this)
+            .setTitle(noticeTitle)
+            .setMessage(noticeContent)
+            .setPositiveButton("OK", DialogInterface.OnClickListener { dialog, which ->
+                // OK 버튼을 누르면 아무 작업 없이 닫기
+                dialog.dismiss()
+            })
+            .show()
+    }
+
     override fun onResume() {
         super.onResume()
 
         // 로그인 페이지에서 돌아와서 로그인이 성공했으면 이미지 변경.
         // 정석은 registerLauncher.launch(intent) 해서 로그인 성공 여부를 돌려받고 해야함.
-        if (CurrentUser.isSignedIn()) myProfile.setImageResource(R.drawable.snake_sparta)
+        if (CurrentUser.isSignedIn()) myProfile.setImageResource(R.drawable.sparta3)
     }
 
 
-        /*
-        val logInButton:Button = findViewById(R.id.logInButton)
+    /*
+    val logInButton:Button = findViewById(R.id.logInButton)
 //        val btnGood: imageButton = findViewById(R.id.btnGood)
 //        goodCount = findViewById(R.id.goodCount)
 */
@@ -93,7 +118,7 @@ class MainPageActivity : AppCompatActivity() {
 //            startActivity(intent)
 //        }
 
-    }
+}
 
 
 
