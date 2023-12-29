@@ -3,7 +3,6 @@ package com.example.appbasic_sns_teamproj
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -19,8 +18,6 @@ class SignInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
 
-        this.setSlide(Direction.STAY, Direction.STAY)
-
         val btn_goSignUpActivity = findViewById<Button>(R.id.btn_goSignUpActivity)
 
         editTv_id = findViewById(R.id.editTv_id)
@@ -35,15 +32,22 @@ class SignInActivity : AppCompatActivity() {
 
         val btn_logIn = findViewById<Button>(R.id.btn_logIn)
         btn_logIn.setOnClickListener {
-            if (editTv_id.text.isEmpty()) {
+            val id = editTv_id.text.toString()
+            val pw = editTv_pw.text.toString()
+            if (id == "") {
                 Toast.makeText(this, "아이디를 확인해주세요", Toast.LENGTH_SHORT).show()
-            } else if (editTv_pw.text.isEmpty()) {
+            } else if (pw == "") {
                 Toast.makeText(this, "패스워드를 확인해주세요", Toast.LENGTH_SHORT).show()
+            } else if (!DB.users.contains(id)) {
+                Toast.makeText(this, "등록되지 않은 아이디입니다", Toast.LENGTH_SHORT).show()
+            } else if (DB.users[id]!!.pw != pw) {
+                Toast.makeText(this, "비밀번호가 틀렸습니다", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, "환영합니다", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, MainPageActivity::class.java)
                 registerLauncher.launch(intent)
-                User.isSignedIn = true
+
+                CurrentUser.user = DB.users[id]
             }
         }
     }

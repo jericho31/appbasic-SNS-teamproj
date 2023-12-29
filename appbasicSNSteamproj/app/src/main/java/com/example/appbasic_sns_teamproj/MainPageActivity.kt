@@ -1,18 +1,12 @@
 package com.example.appbasic_sns_teamproj
 
-import android.annotation.SuppressLint
-import android.content.Context
 import android.content.Intent
-import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.Settings
 import android.util.Log
 import android.widget.Button
 import android.widget.ImageButton
-import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import com.example.appbasic_sns_teamproj.R.layout.activity_main_page
 
 
@@ -46,8 +40,8 @@ class MainPageActivity : AppCompatActivity() {
         // myProfile 이미지버튼 클릭 리스너 설정
         myProfile.setOnClickListener {
 
-            if (User.isSignedIn) {
-                Log.d("MyApp", "User is signed in: ${User.isSignedIn}")
+            if (CurrentUser.isSignedIn()) {
+                Log.d("MyApp", "User is signed in: ${CurrentUser.isSignedIn()}")
                 // 로그인 상태일 때
                 // 이미지 변경은 버튼 클릭할 때가 아니라, 로그인 성공했을 때 해줘야 함.
                 // onResume에 일단 만듦.
@@ -70,7 +64,7 @@ class MainPageActivity : AppCompatActivity() {
 
         // 로그인 페이지에서 돌아와서 로그인이 성공했으면 이미지 변경.
         // 정석은 registerLauncher.launch(intent) 해서 로그인 성공 여부를 돌려받고 해야함.
-        if (User.isSignedIn) myProfile.setImageResource(R.drawable.snake_sparta)
+        if (CurrentUser.isSignedIn()) myProfile.setImageResource(R.drawable.snake_sparta)
     }
 
 
