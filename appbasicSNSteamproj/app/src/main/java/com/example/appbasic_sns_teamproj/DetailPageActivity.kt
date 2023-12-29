@@ -64,7 +64,6 @@ class DetailPageActivity : AppCompatActivity() {
 
         }
 
-        val username = intent.getStringExtra("username")
 // Intent에서 extra 데이터 가져오기
 // 가져온 데이터를 화면에 표시
         dtAppTrack.text = username
