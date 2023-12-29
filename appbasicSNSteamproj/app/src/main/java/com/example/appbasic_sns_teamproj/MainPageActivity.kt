@@ -83,7 +83,6 @@ class MainPageActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
-
     }
 
     private fun showNotice() {

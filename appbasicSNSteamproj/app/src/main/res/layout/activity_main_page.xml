@@ -539,13 +539,13 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="120dp"
+        android:layout_width="240dp"
         android:layout_height="35dp"
         android:layout_marginBottom="50dp"
         android:background="#5AB620"
         android:fontFamily="@font/roboto_black"
         android:gravity="center"
-        android:text="현재 접속자 : 3"
+        android:text="@string/present_connector"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@id/userprofile2"
         app:layout_constraintStart_toStartOf="parent" />
