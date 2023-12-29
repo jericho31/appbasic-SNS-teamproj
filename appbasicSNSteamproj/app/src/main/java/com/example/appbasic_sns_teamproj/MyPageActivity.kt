@@ -13,6 +13,7 @@ import androidx.core.content.res.ResourcesCompat
 
 class MyPageActivity : AppCompatActivity() {
     private val tvId:TextView by lazy { findViewById<TextView>(R.id.txt_id) }
+    private val tvTrack:TextView by lazy { findViewById<TextView>(R.id.txt_track) }
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +26,7 @@ class MyPageActivity : AppCompatActivity() {
         } else {
             val user = CurrentUser.user
             tvId.text = "아이디 : " + (CurrentUser.user?.id ?: "not signed in")
+            tvTrack.text = "트랙 : " + (CurrentUser.user?.track ?: "not signed in")
         }
 
         // 프로필사진 분류 (생각해보니 이걸 굳이 여기서 랜덤을 줄 필요가 없네)

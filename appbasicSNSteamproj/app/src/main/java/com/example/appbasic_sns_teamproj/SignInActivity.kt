@@ -45,7 +45,7 @@ class SignInActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "환영합니다", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, MainPageActivity::class.java)
-                registerLauncher.launch(intent)
+                startActivity(intent)
 
                 CurrentUser.user = DB.users[id]
             }
