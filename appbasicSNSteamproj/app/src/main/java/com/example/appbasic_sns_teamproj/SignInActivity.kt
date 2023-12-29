@@ -14,8 +14,6 @@ class SignInActivity : AppCompatActivity() {
     private lateinit var registerLauncher: ActivityResultLauncher<Intent>
     private lateinit var editTv_id: EditText
     private lateinit var editTv_pw: EditText
-    private lateinit var idData: String
-    private lateinit var pwData: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,7 +42,8 @@ class SignInActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "환영합니다", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, MainPageActivity::class.java)
-                startActivity(intent)
+                registerLauncher.launch(intent)
+                User.isSignedIn = true
             }
         }
     }
@@ -53,8 +52,8 @@ class SignInActivity : AppCompatActivity() {
         registerLauncher =
             registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
                 if (result.resultCode == RESULT_OK) {
-                    idData = result.data?.getStringExtra(Extra.id).toString()
-                    pwData = result.data?.getStringExtra(Extra.password).toString()
+                    var idData = result.data?.getStringExtra(Extra.id)
+                    var pwData = result.data?.getStringExtra(Extra.password)
 //                Log.d("ASDFFFF", "id = ${Extra.id}")
 //                Log.d("ASDFFFF", "pw = ${Extra.password}")
                     editTv_id.setText(idData)
@@ -62,5 +61,4 @@ class SignInActivity : AppCompatActivity() {
                 }
             }
     }
-
 }
