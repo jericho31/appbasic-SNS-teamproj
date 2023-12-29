@@ -36,7 +36,8 @@ class MyPageActivity : AppCompatActivity() {
         val image = when (CurrentUser.user?.track) {
             "Android" -> R.drawable.sparta
             "iOS" -> R.drawable.sparta2
-            else -> R.drawable.sparta3
+            "Unity" -> R.drawable.sparta3
+            else -> R.drawable.snake_sparta
         }
         ivProfil.setImageDrawable(ResourcesCompat.getDrawable(resources, image, null))
 
