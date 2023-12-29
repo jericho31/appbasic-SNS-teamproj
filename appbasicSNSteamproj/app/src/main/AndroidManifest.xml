@@ -22,6 +22,15 @@
             android:name=".DetailPageActivity"
             android:exported="false" />
         <activity
+            android:name=".DetailPageActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".DetailPageActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".DetailPageActivity4"
+            android:exported="false" />
+        <activity
             android:name=".SignUpActivity"
             android:exported="false" />
         <activity
