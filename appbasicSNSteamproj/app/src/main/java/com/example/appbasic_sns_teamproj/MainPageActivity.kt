@@ -28,7 +28,6 @@ class MainPageActivity : AppCompatActivity() {
 //        myProfile 변수에 ID가 myProfile인 ImageButton를 할당한다.
 
 
-
         val btnDetail: Button = findViewById(R.id.btnDetail)
         btnDetail.setOnClickListener {
             val appTrackText: String = appTrack.text.toString()
@@ -93,6 +92,7 @@ class MainPageActivity : AppCompatActivity() {
         // 정석은 registerLauncher.launch(intent) 해서 로그인 성공 여부를 돌려받고 해야함.
         if (CurrentUser.isSignedIn()) myProfile.setImageResource(R.drawable.sparta3)
     }
+
 }
 
 

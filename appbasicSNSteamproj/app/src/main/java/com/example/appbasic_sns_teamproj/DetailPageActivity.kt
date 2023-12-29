@@ -44,10 +44,12 @@ class DetailPageActivity : AppCompatActivity() {
             finish()
         }
     }
+
     override fun onBackPressed() {
         super.onBackPressed()
 
         setSlide(Direction.STAY, Direction.UP)
+        // 뒤로가기 버튼 말고 휴대폰에서 Back 버튼 해야 함.
     }
 }
 
