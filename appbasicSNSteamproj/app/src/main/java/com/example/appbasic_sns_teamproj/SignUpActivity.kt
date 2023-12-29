@@ -144,7 +144,7 @@ class SignUpActivity : AppCompatActivity() {
             } else {
                 "${etMail.text}@${etDomain.text}"
             }
-            intent.putExtra(Extra.id, "${etMail.text}@${spinner.selectedItem}")
+            intent.putExtra(Extra.id, id)
             intent.putExtra(Extra.password, etPw.text.toString())
             intent.putExtra("track", spinnerTrack.selectedItem.toString())
 
@@ -209,7 +209,7 @@ class SignUpActivity : AppCompatActivity() {
                 okDomain = etDomain.text.isNotEmpty()
 
                 if (spinner.isVisible) {
-                    if (!okMail) tvMailWarn.text = "비밀번호를 입력해주세요."
+                    if (!okMail) tvMailWarn.text = "이메일을 입력해주세요."
                     else tvMailWarn.text = ""
                 } else {
                     if (!okMail) tvMailWarn.text = "이메일${if (!okDomain) "과 도메인" else ""}을 입력해주세요."
