@@ -14,7 +14,7 @@ class MyPageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_page)
 
-        // 엑스트라에서 트랙과 아이디 intent 받기
+        // 객체에서 정보 받아오기
         val tv_track = findViewById<TextView>(R.id.txt_track)
         val tv_id = findViewById<TextView>(R.id.txt_id)
         if (intent.hasExtra("track")) {
