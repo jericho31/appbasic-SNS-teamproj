@@ -28,13 +28,49 @@
     <string name="my_page_post">작성글</string>
     <string name="my_page_comment">작성댓글</string>
     <string name="my_page_commentingpost">댓글단 글</string>
-    <string name="my_page_markingpost">좋아요한 글</string>
+    <string name="track_Android">Android</string>
+    <string name="track_IOS">IOS</string>
+    <string name="track_Unity">Unity</string>
+    <string name="track_AI">AI</string>
+
+
+
 
 
 
 
 
 <!--    OSW-->
+    <string name="input_comment">댓글 입력</string>
+    <string name="input_comment_hint">댓글을 적어주세요</string>
+    <string name="like">유익해요!</string>
+    <string name="back">뒤로가기</string>
+
+
+    <string name="main_detail1_title">스파르타 친구들 새해 잘 보내!</string>
+    <string name="main_detail1_content">다들 이번주도 고생했어 Android 화이팅!</string>
+    <string name="main_detail1_comment1">잘쉬고 다음주에 봐!</string>
+    <string name="main_detail1_comment1_1">고마워!</string>
+
+    <string name="main_detail2_title">코딩 너무 어려워..</string>
+    <string name="main_detail2_content">코딩하는데 어떻게 접근해야할 지 모르겠어.. 간단한 팁 같은거 없을까?..</string>
+    <string name="main_detail2_comment1">먼저 혼자서 안되도 접근해보고 튜터님께 가보는게 어떨까?</string>
+    <string name="main_detail2_comment1_1">일단 최대한 혼자 해보려고 노력해볼께 고마워 ^^</string>
+    <string name="main_detail2_comment2">쉬운 알고리즘 문제를 계속 풀어보면서 감을 익히는게 중요한 것 같아</string>
+
+    <string name="main_detail3_title">UNITY 팁하나 알려줄게!</string>
+    <string name="main_detail3_content">줄이동은 Alt + arrow Key로 할 수 있어!</string>
+    <string name="main_detail3_comment1">오!! 덕분에 코드 작성하기 더 수월해졌어~</string>
+    <string name="main_detail3_comment2">다음에 또 유익한 정보 공유해줄께 ㅎㅎ</string>
+
+    <string name="main_detail4_title">최초 AI의 탄생 알고있어??</string>
+    <string name="main_detail4_content">알고 있는 사람은 댓글로 공유해줘~</string>
+    <string name="main_detail4_comment1">1956년부터 AI라는 용어를 사용하기 시작했다네</string>
+    <string name="main_detail4_comment1_1">그리고 이듬해에 초기 인공신경망 퍼셉트론을 만들었어</string>
+    <string name="main_detail4_comment2">최초의 AI는 아니지만 AI를 탑제한 최초의 로봇 쉐이키가 66년에 만들어졌어</string>
+
+
+    <string name="KR_my_page_markingpost">좋아요한 글</string>
 <!--        <string name="app_name">appbasic-SNS-teamproj</string>-->
 <!--        <string name="EN_txt_track">Track</string>-->
 <!--        <string name="EN_txt_id">ID</string>-->
@@ -81,7 +117,7 @@
     <!--    <string name="KR_my_page_post">작성글</string>-->
     <!--    <string name="KR_my_page_comment">작성댓글</string>-->
     <!--    <string name="KR_my_page_commentingpost">댓글단 글</string>-->
-    <!--    <string name="KR_my_page_markingpost">좋아요한 글</string>-->
+
 
 
 

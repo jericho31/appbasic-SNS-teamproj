@@ -6,6 +6,35 @@
     android:layout_height="match_parent"
     tools:context=".DetailPageActivity">
 
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="76dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="@string/track_AI"
+        android:textColor="#2058B8"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView19"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView19" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="@font/roboto_black"
+        android:gravity="center|start"
+        android:text="@string/main_detail4_comment2"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/search"
         android:layout_width="89dp"
@@ -192,7 +221,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:fontFamily="@font/roboto_black"
-        android:text="@string/main_detail1_title"
+        android:text="@string/main_detail4_title"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@id/view10"
         app:layout_constraintStart_toStartOf="parent"
@@ -214,7 +243,7 @@
         android:layout_height="98dp"
         android:fontFamily="@font/roboto_black"
         android:gravity="center|top"
-        android:text="다들 이번주도 고생했어 Android 화이팅!"
+        android:text="@string/main_detail4_content"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="@id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -328,13 +357,13 @@
 
     <TextView
         android:id="@+id/textView14"
-        android:layout_width="343dp"
-        android:layout_height="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:fontFamily="@font/roboto_black"
         android:gravity="center|start"
-        android:text="@string/main_detail1_comment1"
+        android:text="@string/main_detail4_comment1"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -342,13 +371,13 @@
 
     <TextView
         android:id="@+id/textView16"
-        android:layout_width="244dp"
+        android:layout_width="350dp"
         android:layout_height="71dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:fontFamily="@font/roboto_black"
         android:gravity="center|start"
-        android:text="@string/main_detail1_comment1_1"
+        android:text="@string/main_detail4_comment1_1"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -363,25 +392,15 @@
         app:layout_constraintTop_toBottomOf="@+id/view11"
         app:srcCompat="@drawable/ic_back" />
 
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="70dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view12"
-        app:layout_constraintStart_toStartOf="@+id/textView16"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"
-        app:layout_constraintVertical_bias="0.633"
-        app:srcCompat="@drawable/btn_drawable_selector" />
-
     <TextView
         android:id="@+id/textView15"
         android:layout_width="76dp"
         android:layout_height="25dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:gravity="center"
-        android:text="Android"
-        android:textColor="#43A047"
+        android:text="@string/track_AI"
+        android:textColor="#2058B8"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView14"
         app:layout_constraintEnd_toEndOf="parent"
@@ -393,8 +412,8 @@
         android:layout_height="25dp"
         android:layout_marginEnd="20dp"
         android:gravity="center"
-        android:text="Android"
-        android:textColor="#43A047"
+        android:text="@string/track_AI"
+        android:textColor="#2058B8"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView16"
         app:layout_constraintEnd_toEndOf="parent"
