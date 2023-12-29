@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    이름 통일해야 함-->
+    <string name="app_name">appbasic-SNS-teamproj</string>
+    <string name="txt_track">Track</string>
+    <string name="txt_id">ID</string>
+    <string name="txt_modify">Modifying personal info</string>
+    <string name="txt_withdraw">Membership Withdrawal</string>
+    <string name="txt_languageSetting">Language Setting</string>
+    <string name="txt_pw">Password</string>
+    <string name="txt_logIn">LogIn</string>
+    <string name="txt_signUp">SignUp</string>
+    <string name="txt_signUpQuestion">Is this your first playing this app?</string>
+    <string name="txt_name">Name</string>
+    <string name="txt_getName">enter your name</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_getEmail">enter your Email</string>
+    <string name="txt_getPw">8 to 16 characters mixed with English letters, numbers, and special characters</string>
+    <string name="txt_pwCheck">Check password</string>
+    <string name="txt_getPwCheck">enter your password again</string>
+
+<!--    <string name="app_name">appbasic-SNS-teamproj</string>-->
+<!--    <string name="profil_txt_track">Track</string>-->
+<!--    <string name="profil_txt_id">ID</string>-->
+<!--    <string name="profil_btn_setting">Language Setting</string>-->
+<!--    <string name="profil_btn_revise">Modifying personal info</string>-->
+<!--    <string name="profil_btn_withdraw">Membership Withdrawal</string>-->
+<!--    <string name="lng_txt_setting">Language Setting</string>-->
+<!--    <string name="KOR_id_hint">ID</string>-->
+<!--    <string name="KOR_pw_hint">Password</string>-->
+<!--    <string name="KOR_logInButton">LogIn</string>-->
+<!--    <string name="KOR_signUpButton">SignUp</string>-->
+<!--    <string name="KOR_signUpQuestion">Is it your first playing this app?</string>-->
+    <string name="lng_btn_check">check</string>
+    <string name="my_page_time">1 days ago</string>
+    <string name="my_page_post">Posts</string>
+    <string name="my_page_comment">Comments</string>
+    <string name="my_page_commentingpost">Posts I comment</string>
+    <string name="my_page_markingpost">Posts I marked</string>
+    <string name="notice_content">Hello sparta people!</string>
+
+
+    <!--    OSW-->
+<!--    <string name="app_name">appbasic-SNS-teamproj</string>-->
+<!--    <string name="EN_txt_track">Track</string>-->
+<!--    <string name="EN_txt_id">ID</string>-->
+<!--    <string name="EN_txt_modify">Modifying personal info</string>-->
+<!--    <string name="EN_txt_withdraw">Membership Withdrawal</string>-->
+<!--    <string name="EN_txt_languageSetting">Language Setting</string>-->
+<!--    <string name="EN_txt_pw">Password</string>-->
+<!--    <string name="EN_txt_logIn">LogIn</string>-->
+<!--    <string name="EN_txt_signUp">SignUp</string>-->
+<!--    <string name="EN_txt_signUpQuestion">Is this your first playing this app?</string>-->
+<!--    <string name="EN_txt_name">Name</string>-->
+<!--    <string name="EN_txt_getName">enter your name</string>-->
+<!--    <string name="EN_txt_email">Email</string>-->
+<!--    <string name="EN_txt_getEmail">enter your Email</string>-->
+<!--    <string name="EN_txt_getPw">8 to 16 characters mixed with English letters, numbers, and special characters</string>-->
+<!--    <string name="EN_txt_pwCheck">Check password</string>-->
+<!--    <string name="EN_txt_getPwCheck">enter your password again</string>-->
+
+
+    <!--    <string name="KR_txt_track">트랙</string>-->
+<!--    <string name="KR_txt_id">아이디(이메일)</string>-->
+<!--    <string name="KR_txt_pw">비밀번호</string>-->
+<!--    <string name="KR_txt_modify">개인정보 수정</string>-->
+<!--    <string name="KR_txt_withdraw">회원탈퇴</string>-->
+<!--    <string name="KR_txt_languageSetting">언어 설정</string>-->
+<!--    <string name="KR_txt_logIn">로그인</string>-->
+<!--    <string name="KR_txt_signUp">회원가입</string>-->
+<!--    <string name="KR_txt_signUpQuestion">처음이용하시는건가요?</string>-->
+<!--    <string name="KR_txt_name">이름</string>-->
+<!--    <string name="KR_txt_getName">이름을 입력해주세요</string>-->
+<!--    <string name="KR_txt_email">이메일</string>-->
+<!--    <string name="KR_txt_getEmail">이메일을 입력해주세요</string>-->
+<!--    <string name="KR_txt_getPw">영문, 숫자, 특수문자 혼합 8~16자</string>-->
+<!--    <string name="KR_txt_pwCheck">비밀번호 확인</string>-->
+<!--    <string name="KR_txt_getPwCheck">비밀번호를 한 번 더 입력하세요</string>-->
+
+
+    <!--    KGW-->
+
+
+
+    <!--    LYJ-->
+
+
+
+    <!--    JHW-->
+
+
+
+</resources>
