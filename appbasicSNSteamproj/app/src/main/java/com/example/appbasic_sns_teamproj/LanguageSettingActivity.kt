@@ -1,5 +1,6 @@
 package com.example.appbasic_sns_teamproj
 
+import android.hardware.biometrics.BiometricManager.Strings
 import android.app.Activity
 import android.content.Context
 import android.content.res.Configuration

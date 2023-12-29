@@ -71,15 +71,15 @@
     <Button
         android:id="@+id/btnBack"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton.Icon"
-        android:layout_width="123dp"
-        android:layout_height="41dp"
+        android:layout_width="131dp"
+        android:layout_height="47dp"
         android:layout_marginStart="6dp"
         android:layout_marginTop="5dp"
         android:background="#00A14949"
         android:fontFamily="@font/roboto_black"
         android:text="뒤로가기"
         android:textColor="#020202"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:icon="@drawable/ic_back"
         app:iconTint="#E91E63"
         app:layout_constraintStart_toStartOf="parent"
@@ -87,15 +87,16 @@
 
     <TextView
         android:id="@+id/dtAppTrack"
-        android:layout_width="70dp"
-        android:layout_height="24dp"
+        android:layout_width="96dp"
+        android:layout_height="32dp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="2dp"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toTopOf="@id/textView7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnBack" />
+        app:layout_constraintTop_toBottomOf="@id/btnBack"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView3"
@@ -143,6 +144,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2023-12-31"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@id/view2"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -161,6 +163,7 @@
         android:layout_height="19dp"
         android:gravity="center"
         android:text="6"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@id/view2"
         app:layout_constraintStart_toEndOf="@id/imageView" />
 
@@ -179,6 +182,7 @@
         android:layout_height="19dp"
         android:gravity="center"
         android:text="2"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@id/view2"
         app:layout_constraintStart_toEndOf="@id/imageView5" />
 
@@ -189,6 +193,7 @@
         android:layout_marginStart="5dp"
         android:fontFamily="@font/roboto_black"
         android:text="스파르타 친구들 새해 잘 보내!"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@id/view10"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/view2" />
@@ -210,7 +215,7 @@
         android:fontFamily="@font/roboto_black"
         android:gravity="center|top"
         android:text="다들 이번주도 고생했어 Android 화이팅!"
-        android:textSize="20sp"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="@id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -249,11 +254,12 @@
             android:layout_alignEnd="@+id/buttonLike"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="0dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="14dp"
             android:gravity="center|end"
-            android:text="0" />
+            android:text="0"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/buttonLike"
@@ -267,12 +273,13 @@
             android:layout_marginBottom="0dp"
             android:background="#66A32579"
             android:backgroundTint="#FFFF00"
-            android:gravity="center|start"
+            android:gravity="center|start|left"
             android:text="유익해요!"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#B81B9E"
             android:textColorHighlight="#290707"
             android:textColorLink="#CF2C2C"
-            android:textSize="14sp" />
+            android:textSize="18sp" />
 
         <ImageView
             android:id="@+id/imageView10"
@@ -281,9 +288,9 @@
             android:layout_alignTop="@+id/buttonLike"
             android:layout_alignEnd="@+id/buttonLike"
             android:layout_alignBottom="@+id/buttonLike"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="25dp"
-            android:layout_marginBottom="4dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="2dp"
             app:srcCompat="@drawable/good2" />
 
     </RelativeLayout>
@@ -301,7 +308,8 @@
             android:id="@+id/editTextComment"
             android:layout_width="230dp"
             android:layout_height="wrap_content"
-            android:hint="댓글을 적어주세요." />
+            android:hint="댓글을 적어주세요."
+            android:textSize="24sp" />
 
     </LinearLayout>
 
@@ -310,7 +318,9 @@
         android:id="@+id/buttonPostComment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="댓글 등록"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/commentSection"
         app:layout_constraintEnd_toEndOf="@+id/commentSection"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
@@ -325,7 +335,7 @@
         android:fontFamily="@font/roboto_black"
         android:gravity="center|start"
         android:text="잘쉬고 다음주에 봐!"
-        android:textSize="20sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/commentSection" />
@@ -339,7 +349,7 @@
         android:fontFamily="@font/roboto_black"
         android:gravity="center|start"
         android:text="고마워!"
-        android:textSize="20sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view11" />
@@ -363,6 +373,35 @@
         app:layout_constraintTop_toBottomOf="@+id/textView14"
         app:layout_constraintVertical_bias="0.633"
         app:srcCompat="@drawable/btn_drawable_selector" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="76dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:text="Android"
+        android:textColor="#43A047"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="76dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:text="Android"
+        android:textColor="#43A047"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView16" />
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
