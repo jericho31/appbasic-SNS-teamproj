@@ -20,7 +20,6 @@ class MyPageActivity : AppCompatActivity() {
         val tv_id = findViewById<TextView>(R.id.txt_id)
         tv_id.text = "아이디 : " + User.id
 
-
         // 프로필사진 분류 (생각해보니 이걸 굳이 여기서 랜덤을 줄 필요가 없네)
 //        val iv_profil = findViewById<ImageView>(R.id.iv_profil)
 //        val image = when ((1..3).random()) {
