@@ -21,6 +21,7 @@ class MainPageActivity : AppCompatActivity() {
 //        현재 액티비티의 상태를 복원하고 레이아웃 파일인 activity_main_page를 화면에 표시하는 코드이다.
         showNotice()
 
+
         appTrack = findViewById(R.id.appTrack)
         myProfile = findViewById(R.id.myProfile)
 //        appTrack 변수에 ID가 appTrack인 TextView를 할당하고,
@@ -91,32 +92,6 @@ class MainPageActivity : AppCompatActivity() {
         // 정석은 registerLauncher.launch(intent) 해서 로그인 성공 여부를 돌려받고 해야함.
         if (CurrentUser.isSignedIn()) myProfile.setImageResource(R.drawable.sparta3)
     }
-
-
-    /*
-    val logInButton:Button = findViewById(R.id.logInButton)
-//        val btnGood: imageButton = findViewById(R.id.btnGood)
-//        goodCount = findViewById(R.id.goodCount)
-*/
-
-
-//        val logInButton:Button = findViewById(R.id.button)
-//        logInButton.setOnClickListener {
-//            val intent = Intent(this, SignInActivity::class.java)
-//            startActivity(intent)
-//        }
-
-//        val myProfile: ImageButton = findViewById(R.id.myProfile)
-//        myProfile.setOnClickListener {
-//    val intent = Intent(this, SignInActivity::class.java)
-//    startActivity(intent)
-//}
-
-//        val myProfile: ImageButton = findViewById(R.id.myProfile)
-//        myProfile.setOnClickListener {
-//            val intent = Intent(this, MyPageActivity::class.java)
-//            startActivity(intent)
-//        }
 
 }
 

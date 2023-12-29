@@ -17,6 +17,8 @@ class DetailPageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_page)
 
+        this.setSlide(Direction.UP, Direction.STAY)
+
         val btnBack: Button = findViewById(R.id.btnBack)
         val dtAppTrack: TextView = findViewById(R.id.dtAppTrack)
         val buttonLike = findViewById<Button>(R.id.buttonLike)
@@ -32,15 +34,22 @@ class DetailPageActivity : AppCompatActivity() {
             textViewLikeCount.text = "$likeCount"
 
         }
+
         val username = intent.getStringExtra("username")
 // Intent에서 extra 데이터 가져오기
 // 가져온 데이터를 화면에 표시
         dtAppTrack.text = username
         btnBack.setOnClickListener {
             // 뒤로가기 클릭시 메인으로 이동
-            val intent = Intent(this@DetailPageActivity, MainPageActivity::class.java)
-            startActivity(intent)
+            finish()
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+
+        setSlide(Direction.STAY, Direction.UP)
+        // 뒤로가기 버튼 말고 휴대폰에서 Back 버튼 해야 함.
     }
 }
 
