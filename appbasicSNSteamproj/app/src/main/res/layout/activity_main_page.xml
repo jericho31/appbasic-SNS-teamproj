@@ -53,7 +53,6 @@
         android:id="@+id/view5"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginBottom="8dp"
         android:background="@android:color/black"
         app:layout_constraintBottom_toTopOf="@id/search"
         tools:layout_editor_absoluteX="-16dp" />
@@ -61,8 +60,8 @@
     <TextView
         android:id="@+id/textView2"
         style="@style/Widget.Material3.MaterialTimePicker.Display.HelperText"
-        android:layout_width="66dp"
-        android:layout_height="33dp"
+        android:layout_width="81dp"
+        android:layout_height="38dp"
         android:layout_marginStart="30dp"
         android:layout_marginBottom="40dp"
         android:background="#F44336"
@@ -102,7 +101,7 @@
         android:id="@+id/coding"
         style="@style/Widget.Material3.Button.TonalButton"
         android:layout_width="145dp"
-        android:layout_height="45dp"
+        android:layout_height="50dp"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="35dp"
         android:background="@drawable/selector_button"
@@ -118,8 +117,8 @@
     <Button
         android:id="@+id/daily"
         style="@style/Widget.Material3.Button.TonalButton"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
+        android:layout_width="95dp"
+        android:layout_height="50dp"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="35dp"
         android:background="@drawable/selector_button"
@@ -144,8 +143,8 @@
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/search"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="416dp"
+        android:layout_height="65dp"
 
         android:layout_marginBottom="40dp"
         android:gravity="center|center_vertical"
@@ -153,6 +152,7 @@
         android:inputType="text"
         android:maxLines="1"
 
+        android:textSize="26sp"
         app:layout_constraintBottom_toTopOf="@id/daily"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -167,6 +167,7 @@
         android:gravity="center"
         android:text="1일전"
         android:textIsSelectable="false"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/linearLayout" />
@@ -180,6 +181,7 @@
         android:gravity="center"
         android:text="1일전"
         android:textIsSelectable="false"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/btnDetail2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/btnDetail2" />
@@ -193,6 +195,7 @@
         android:gravity="center"
         android:text="1일전"
         android:textIsSelectable="false"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/btnDetail3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/btnDetail3" />
@@ -206,6 +209,7 @@
         android:gravity="center"
         android:text="1일전"
         android:textIsSelectable="false"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnDetail4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btnDetail4" />
@@ -220,20 +224,22 @@
         android:gravity="center_horizontal"
         android:text="Android"
         android:textColor="#8BC34A"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/linearLayout"
         app:layout_constraintStart_toStartOf="@id/linearLayout"
         app:layout_constraintTop_toTopOf="@id/linearLayout" />
 
     <TextView
         android:id="@+id/writing"
-        android:layout_width="183dp"
-        android:layout_height="26dp"
+        android:layout_width="235dp"
+        android:layout_height="29dp"
         android:layout_marginStart="3dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/roboto_black"
         android:gravity="center"
         android:text="스파르타 친구들 새해 잘 보내!"
+        android:textSize="19sp"
         app:layout_constraintBottom_toBottomOf="@id/linearLayout"
         app:layout_constraintStart_toEndOf="@id/appTrack"
         app:layout_constraintTop_toTopOf="@id/linearLayout"
@@ -250,6 +256,7 @@
         android:fontFamily="@font/roboto_black"
         android:gravity="center"
         android:text="코딩 너무 어려워.."
+        android:textSize="19sp"
         app:layout_constraintBottom_toTopOf="@id/btnDetail3"
         app:layout_constraintStart_toEndOf="@id/appTrack2"
         app:layout_constraintTop_toBottomOf="@id/linearLayout" />
@@ -264,34 +271,37 @@
         android:gravity="center_horizontal"
         android:text="IOS"
         android:textColor="#FD34B59B"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@id/btnDetail3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearLayout" />
 
     <TextView
         android:id="@+id/writing3"
-        android:layout_width="183dp"
-        android:layout_height="26dp"
+        android:layout_width="218dp"
+        android:layout_height="23dp"
         android:layout_marginStart="3dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/roboto_black"
         android:gravity="center"
         android:text="UNITY 팁 몇가지 알려줄게!"
+        android:textSize="19sp"
         app:layout_constraintBottom_toBottomOf="@id/btnDetail3"
         app:layout_constraintStart_toEndOf="@id/appTrack3"
         app:layout_constraintTop_toTopOf="@id/btnDetail3" />
 
     <TextView
         android:id="@+id/writing4"
-        android:layout_width="183dp"
-        android:layout_height="26dp"
+        android:layout_width="219dp"
+        android:layout_height="28dp"
         android:layout_marginStart="3dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/roboto_black"
         android:gravity="center"
         android:text="최초 AI의 탄생 알고있어??"
+        android:textSize="19sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnDetail4"
         app:layout_constraintStart_toEndOf="@+id/appTrack4"
         app:layout_constraintTop_toTopOf="@+id/btnDetail4" />
@@ -306,6 +316,7 @@
         android:gravity="center_horizontal"
         android:text="UNITY"
         android:textColor="#9F9B9B"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/btnDetail3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/btnDetail3" />
@@ -320,17 +331,19 @@
         android:gravity="center_horizontal"
         android:text="AI"
         android:textColor="#2058B8"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnDetail4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btnDetail4" />
 
     <TextView
         android:id="@+id/goodCount"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_marginStart="2dp"
         android:gravity="center"
         android:text="0"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/linearLayout"
         app:layout_constraintStart_toEndOf="@id/btnGood"
         app:layout_constraintTop_toTopOf="@id/linearLayout"
@@ -338,11 +351,12 @@
 
     <TextView
         android:id="@+id/goodCount2"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_marginStart="2dp"
         android:gravity="center"
         android:text="0"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/btnDetail2"
         app:layout_constraintStart_toEndOf="@id/btnGood2"
         app:layout_constraintTop_toTopOf="@id/btnDetail2"
@@ -350,11 +364,12 @@
 
     <TextView
         android:id="@+id/goodCount3"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_marginStart="2dp"
         android:gravity="center"
         android:text="0"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/btnDetail3"
         app:layout_constraintStart_toEndOf="@id/btnGood3"
         app:layout_constraintTop_toTopOf="@id/btnDetail3"
@@ -362,11 +377,12 @@
 
     <TextView
         android:id="@+id/goodCount4"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_marginStart="2dp"
         android:gravity="center"
         android:text="0"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnDetail4"
         app:layout_constraintStart_toEndOf="@+id/btnGood4"
         app:layout_constraintTop_toTopOf="@+id/btnDetail4"
@@ -377,7 +393,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="60dp"
         android:background="@drawable/rounded_background"
         android:clipToOutline="true"
         android:scaleType="center"
@@ -389,8 +405,8 @@
         android:id="@+id/userprofile"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="60dp"
         android:background="@drawable/rounded_background"
         android:clipToOutline="true"
         android:scaleType="centerInside"
@@ -402,9 +418,10 @@
         android:id="@+id/userprofile2"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/rounded_background_small"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/rounded_background"
+        android:backgroundTint="#6A3E85"
         android:clipToOutline="true"
         android:rotationX="-1"
         android:scaleType="centerInside"
@@ -456,11 +473,12 @@
         android:id="@+id/rdGlasses"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="@id/search"
         app:layout_constraintStart_toStartOf="@id/search"
         app:layout_constraintTop_toTopOf="@id/search"
+        app:layout_constraintVertical_bias="0.92"
         app:srcCompat="@drawable/one" />
 
     <View
@@ -523,23 +541,26 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="94dp"
-        android:layout_height="22dp"
-        android:layout_marginBottom="10dp"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="50dp"
         android:background="#5AB620"
         android:fontFamily="@font/roboto_black"
         android:gravity="center"
         android:text="현재 접속자 : 3"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@id/userprofile2"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="26dp"
-        android:layout_height="20dp"
-        android:layout_marginEnd="27dp"
+        android:layout_width="49dp"
+        android:layout_height="21dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="52dp"
         android:gravity="center"
         android:text="MY"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/view5"
         app:layout_constraintEnd_toEndOf="parent" />
 
