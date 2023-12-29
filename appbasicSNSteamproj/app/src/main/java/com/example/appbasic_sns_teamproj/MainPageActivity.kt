@@ -30,7 +30,7 @@ class MainPageActivity : AppCompatActivity() {
 
 
 
-    */
+
         val logInButton: Button = findViewById(R.id.button)
         logInButton.setOnClickListener {
             val intent = Intent(this, SignInActivity::class.java)
@@ -51,7 +51,7 @@ class MainPageActivity : AppCompatActivity() {
 
         val btnDetail: Button = findViewById(R.id.btnDetail)
         btnDetail.setOnClickListener {
-            detail()
+//            detail()
             // 글 클릭시 디테일로 이동
 
             val appTrackText: String = appTrack.text.toString()
