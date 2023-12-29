@@ -21,6 +21,7 @@ class SignInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
 
+        this.setSlide(Direction.STAY, Direction.STAY)
 
         val btn_goSignUpActivity = findViewById<Button>(R.id.btn_goSignUpActivity)
 
