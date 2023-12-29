@@ -37,6 +37,7 @@
     <string name="my_page_comment">Comments</string>
     <string name="my_page_commentingpost">Posts I comment</string>
     <string name="my_page_markingpost">Posts I marked</string>
+    <string name="notice_content">Hello sparta people!</string>
 
 
     <!--    OSW-->
@@ -58,7 +59,8 @@
 <!--    <string name="EN_txt_pwCheck">Check password</string>-->
 <!--    <string name="EN_txt_getPwCheck">enter your password again</string>-->
 
-<!--    <string name="KR_txt_track">트랙</string>-->
+
+    <!--    <string name="KR_txt_track">트랙</string>-->
 <!--    <string name="KR_txt_id">아이디(이메일)</string>-->
 <!--    <string name="KR_txt_pw">비밀번호</string>-->
 <!--    <string name="KR_txt_modify">개인정보 수정</string>-->

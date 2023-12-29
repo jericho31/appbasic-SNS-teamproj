@@ -396,7 +396,7 @@
         android:layout_marginBottom="60dp"
         android:background="@drawable/rounded_background"
         android:clipToOutline="true"
-        android:scaleType="center"
+        android:scaleType="centerInside"
         app:layout_constraintBottom_toTopOf="@id/search"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/login" />
