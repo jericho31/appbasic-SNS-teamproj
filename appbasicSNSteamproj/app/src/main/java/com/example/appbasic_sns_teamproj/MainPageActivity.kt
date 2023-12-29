@@ -36,7 +36,29 @@ class MainPageActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val btnDetail2: Button = findViewById(R.id.btnDetail2)
+        btnDetail2.setOnClickListener {
+            val appTrackText: String = appTrack.text.toString()
+            val intent = Intent(this@MainPageActivity, DetailPageActivity2::class.java)
+            intent.putExtra("username", appTrackText)
+            startActivity(intent)
+        }
 
+        val btnDetail3: Button = findViewById(R.id.btnDetail3)
+        btnDetail3.setOnClickListener {
+            val appTrackText: String = appTrack.text.toString()
+            val intent = Intent(this@MainPageActivity, DetailPageActivity3::class.java)
+            intent.putExtra("username", appTrackText)
+            startActivity(intent)
+        }
+
+        val btnDetail4: Button = findViewById(R.id.btnDetail4)
+        btnDetail4.setOnClickListener {
+            val appTrackText: String = appTrack.text.toString()
+            val intent = Intent(this@MainPageActivity, DetailPageActivity4::class.java)
+            intent.putExtra("username", appTrackText)
+            startActivity(intent)
+        }
 //        ID가 btnDetail인 Button을 찾아 btnDetail 변수에 할당하고,
         //        해당 버튼에 클릭 리스너를 설정한다. 버튼이 클릭되면
         //        DetailPageActivity로 이동하면서
