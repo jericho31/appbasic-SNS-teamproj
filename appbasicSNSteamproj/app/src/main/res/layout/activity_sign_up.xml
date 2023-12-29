@@ -133,7 +133,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="@string/txt_pwCheck"
+        android:text="@string/txt_track"
         android:textSize="18sp" />
 
     <EditText
@@ -142,7 +142,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:ems="10"
-        android:hint="@string/txt_getPwCheck"
+        android:hint="@string/txt_track"
         android:inputType="textPassword" />
 
     <TextView
