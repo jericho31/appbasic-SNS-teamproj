@@ -15,11 +15,7 @@ class MyPageActivity : AppCompatActivity() {
         setContentView(R.layout.activity_my_page)
 
         // 객체에서 정보 받아오기
-        val tv_track = findViewById<TextView>(R.id.txt_track)
         val tv_id = findViewById<TextView>(R.id.txt_id)
-        if (intent.hasExtra("track")) {
-            tv_track.text = "트랙 : " + intent.getStringExtra("track")
-        }
         if (intent.hasExtra("id")) {
             tv_id.text = "아이디 : " + intent.getStringExtra("id")
 
