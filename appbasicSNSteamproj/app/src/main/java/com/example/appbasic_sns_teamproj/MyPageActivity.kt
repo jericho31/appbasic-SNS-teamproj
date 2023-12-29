@@ -29,7 +29,7 @@ class MyPageActivity : AppCompatActivity() {
 //        }
 //        iv_profil.setImageDrawable(ResourcesCompat.getDrawable(resources, image, null))
 
-        // 자신의 트랙에 따라서 보여지는 트랙과 게시글 제목 분류
+        // 자신의 트랙에 따라서 보여지는 트랙과 게시글 제목 분류 (그런데 이걸 트랙을 받을 방법이 없어서 보류)
 //        val tv_trackName = findViewById<TextView>(R.id.txt_apptrack)
 //        val tv_writting = findViewById<TextView>(R.id.txt_writing)
 //        tv_trackName.text = intent.getStringExtra("track")
