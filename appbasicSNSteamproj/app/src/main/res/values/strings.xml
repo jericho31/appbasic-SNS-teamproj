@@ -5,6 +5,7 @@
     <string name="lng_txt_korean" translatable="false">한국어 (Korean)</string>
     <string name="lng_txt_english" translatable="false">영어 (English)</string>
 
+
     <string name="txt_track">트랙</string>
     <string name="txt_id">아이디(이메일)</string>
     <string name="txt_pw">비밀번호</string>
@@ -29,8 +30,8 @@
     <string name="my_page_comment">작성댓글</string>
     <string name="my_page_commentingpost">댓글단 글</string>
     <string name="my_page_markingpost">좋아요한 글</string>
-    <string name="notice_content" translatable="false">어서오세요 르탄이분들!</string>
-    <string name="notice_title" translatable="false">공지</string>
+    <string name="notice_content">어서오세요 르탄이분들!</string>
+    <string name="notice_title">공지</string>
     <string name="track_Android" translatable="false">Android</string>
     <string name="track_IOS" translatable="false">IOS</string>
     <string name="track_Unity" translatable="false">Unity</string>
@@ -77,6 +78,7 @@
     <string name="daily">일상</string>
     <string name="writing">글쓰기</string>
     <string name="sparta_forest">스파르타 숲</string>
+    <string name="present_connector">현재 접속자 : 3</string>
 
 
 <!--    <string name="my_page_markingpost">좋아요한 글</string>-->

@@ -26,33 +26,6 @@ class DetailPageActivity : AppCompatActivity() {
         val textViewLikeCount = findViewById<TextView>(R.id.textViewLikeCount)
         val username = intent.getStringExtra("username")
 
-// 코드로 UI내에 text 수정
-//        Log.d("Track", "track = $username")
-//        val txt_title = findViewById<TextView>(R.id.textView11)
-//        val txt_detail = findViewById<TextView>(R.id.textView13)
-//        val txt_track1 = findViewById<TextView>(R.id.textView15)
-//        val txt_track2 = findViewById<TextView>(R.id.textView18)
-//        when {
-//            username == "Android" -> {
-//                txt_title.setText("스파르타 친구들 새해 잘 보내!")
-//                txt_detail.setText("다들 이번주도 고생했어 Android 화이팅!")
-//            }
-//
-//            username == "IOS" -> {
-//                txt_title.setText("코딩 너무 어려워..")
-//                txt_detail.setText("코딩하는데 어떻게 접근해야할 지 모르겠어.. 간단한 팁 같은거 없을까?..")
-//            }
-//
-//            username == "Unity" -> {
-//                txt_title.setText("UNITY 팁 하나 알려줄게!")
-//                txt_detail.setText("줄이동은 Alt + arrow Key로 할 수 있어!")
-//            }
-//
-//            username == "AI" -> {
-//                txt_title.setText("최초 AI의 탄생 알고있어??")
-//                txt_detail.setText("알고 있는 사람은 댓글로 공유해줘~")
-//            }
-//        }
 
 
         buttonLike.setOnClickListener {
@@ -63,7 +36,6 @@ class DetailPageActivity : AppCompatActivity() {
             textViewLikeCount.text = "$likeCount"
 
         }
-
 // Intent에서 extra 데이터 가져오기
 // 가져온 데이터를 화면에 표시
         dtAppTrack.text = username
