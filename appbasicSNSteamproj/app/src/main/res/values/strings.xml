@@ -5,6 +5,7 @@
     <string name="lng_txt_korean" translatable="false">한국어 (Korean)</string>
     <string name="lng_txt_english" translatable="false">영어 (English)</string>
 
+
     <string name="txt_track">트랙</string>
     <string name="txt_id">아이디(이메일)</string>
     <string name="txt_pw">비밀번호</string>
