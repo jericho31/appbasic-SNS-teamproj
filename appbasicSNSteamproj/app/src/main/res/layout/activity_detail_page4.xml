@@ -135,7 +135,7 @@
         android:background="#E161A664"
         android:fontFamily="@font/roboto_black"
         android:gravity="center|left"
-        android:text="스파르타 숲"
+        android:text="@string/sparta_forest"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="normal"
