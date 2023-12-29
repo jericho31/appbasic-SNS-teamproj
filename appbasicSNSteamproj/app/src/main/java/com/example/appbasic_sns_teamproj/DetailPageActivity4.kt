@@ -19,10 +19,10 @@ class DetailPageActivity4 : AppCompatActivity() {
         setContentView(R.layout.activity_detail_page4)
 
         val btnBack: Button = findViewById(R.id.btnBack)
-        val dtAppTrack: TextView = findViewById(R.id.dtAppTrack)
+        val dtAiTrack: TextView = findViewById(R.id.dtAiTrack)
         val buttonLike = findViewById<Button>(R.id.buttonLike)
         val textViewLikeCount = findViewById<TextView>(R.id.textViewLikeCount)
-        val username = intent.getStringExtra("username")
+        val username4 = intent.getStringExtra("username")
 
         this.setSlide(Direction.UP, Direction.STAY)
 
@@ -36,7 +36,7 @@ class DetailPageActivity4 : AppCompatActivity() {
         }
 // Intent에서 extra 데이터 가져오기
 // 가져온 데이터를 화면에 표시
-        dtAppTrack.text = username
+        dtAiTrack.text = username4
         btnBack.setOnClickListener {
             // 뒤로가기 클릭시 메인으로 이동
             val intent = Intent(this@DetailPageActivity4, MainPageActivity::class.java)

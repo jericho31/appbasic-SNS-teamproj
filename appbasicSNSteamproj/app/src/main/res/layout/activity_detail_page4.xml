@@ -115,7 +115,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/dtAppTrack"
+        android:id="@+id/dtAiTrack"
         android:layout_width="96dp"
         android:layout_height="32dp"
         android:layout_marginTop="15dp"
