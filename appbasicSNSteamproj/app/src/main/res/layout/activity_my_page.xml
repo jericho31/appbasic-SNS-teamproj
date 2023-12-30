@@ -12,7 +12,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="60dp"
-        android:src="@drawable/sparta"
+        android:src="@drawable/sparta3"
         android:background="@drawable/rounded_background"
         android:clipToOutline="true"
         android:scaleType="centerCrop"
