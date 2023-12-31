@@ -14,6 +14,9 @@ import com.example.appbasic_sns_teamproj.R.layout.activity_main_page
 
 class MainPageActivity : AppCompatActivity() {
     private lateinit var appTrack: TextView
+    private lateinit var iosTrack: TextView
+    private lateinit var unityTrack: TextView
+    private lateinit var aiTrack: TextView
     private lateinit var myProfile: ImageButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,8 +24,14 @@ class MainPageActivity : AppCompatActivity() {
 //        현재 액티비티의 상태를 복원하고 레이아웃 파일인 activity_main_page를 화면에 표시하는 코드이다.
         showNotice()
 
-
         appTrack = findViewById(R.id.appTrack)
+        iosTrack = findViewById(R.id.iosTrack)
+        unityTrack = findViewById(R.id.unityTrack)
+        aiTrack = findViewById(R.id.aiTrack)
+
+
+
+
         myProfile = findViewById(R.id.myProfile)
 //        appTrack 변수에 ID가 appTrack인 TextView를 할당하고,
 //        myProfile 변수에 ID가 myProfile인 ImageButton를 할당한다.
@@ -36,27 +45,28 @@ class MainPageActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
         val btnDetail2: Button = findViewById(R.id.btnDetail2)
         btnDetail2.setOnClickListener {
-            val appTrackText: String = appTrack.text.toString()
+            val iosTrackText: String = iosTrack.text.toString()
             val intent = Intent(this@MainPageActivity, DetailPageActivity2::class.java)
-            intent.putExtra("username", appTrackText)
+            intent.putExtra("username", iosTrackText)
             startActivity(intent)
         }
 
         val btnDetail3: Button = findViewById(R.id.btnDetail3)
         btnDetail3.setOnClickListener {
-            val appTrackText: String = appTrack.text.toString()
+            val unityTrackText: String = unityTrack.text.toString()
             val intent = Intent(this@MainPageActivity, DetailPageActivity3::class.java)
-            intent.putExtra("username", appTrackText)
+            intent.putExtra("username", unityTrackText)
             startActivity(intent)
         }
 
         val btnDetail4: Button = findViewById(R.id.btnDetail4)
         btnDetail4.setOnClickListener {
-            val appTrackText: String = appTrack.text.toString()
+            val aiTrackText: String = aiTrack.text.toString()
             val intent = Intent(this@MainPageActivity, DetailPageActivity4::class.java)
-            intent.putExtra("username", appTrackText)
+            intent.putExtra("username", aiTrackText)
             startActivity(intent)
         }
 //        ID가 btnDetail인 Button을 찾아 btnDetail 변수에 할당하고,

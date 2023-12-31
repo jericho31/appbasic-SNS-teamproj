@@ -256,11 +256,11 @@
         android:text="@string/main_detail2_title"
         android:textSize="19sp"
         app:layout_constraintBottom_toTopOf="@id/btnDetail3"
-        app:layout_constraintStart_toEndOf="@id/appTrack2"
+        app:layout_constraintStart_toEndOf="@id/iosTrack"
         app:layout_constraintTop_toBottomOf="@id/linearLayout" />
 
     <TextView
-        android:id="@+id/appTrack2"
+        android:id="@+id/iosTrack"
         android:layout_width="60dp"
         android:layout_height="21dp"
         android:layout_marginTop="10dp"
@@ -286,7 +286,7 @@
         android:text="@string/main_detail3_title"
         android:textSize="19sp"
         app:layout_constraintBottom_toBottomOf="@id/btnDetail3"
-        app:layout_constraintStart_toEndOf="@id/appTrack3"
+        app:layout_constraintStart_toEndOf="@id/unityTrack"
         app:layout_constraintTop_toTopOf="@id/btnDetail3" />
 
     <TextView
@@ -301,11 +301,11 @@
         android:text="@string/main_detail4_title"
         android:textSize="19sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnDetail4"
-        app:layout_constraintStart_toEndOf="@+id/appTrack4"
+        app:layout_constraintStart_toEndOf="@+id/aiTrack"
         app:layout_constraintTop_toTopOf="@+id/btnDetail4" />
 
     <TextView
-        android:id="@+id/appTrack3"
+        android:id="@+id/unityTrack"
         android:layout_width="60dp"
         android:layout_height="21dp"
         android:layout_marginTop="11dp"
@@ -320,7 +320,7 @@
         app:layout_constraintTop_toTopOf="@id/btnDetail3" />
 
     <TextView
-        android:id="@+id/appTrack4"
+        android:id="@+id/aiTrack"
         android:layout_width="60dp"
         android:layout_height="0dp"
         android:layout_marginTop="11dp"
@@ -391,7 +391,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="17dp"
         android:background="@drawable/rounded_background"
         android:clipToOutline="true"
         android:scaleType="centerInside"
@@ -404,7 +404,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="17dp"
         android:background="@drawable/rounded_background"
         android:clipToOutline="true"
         android:scaleType="centerInside"
@@ -417,7 +417,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="17dp"
         android:background="@drawable/rounded_background"
         android:backgroundTint="#6A3E85"
         android:clipToOutline="true"
@@ -541,7 +541,7 @@
         android:id="@+id/textView4"
         android:layout_width="240dp"
         android:layout_height="35dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="73dp"
         android:background="#5AB620"
         android:fontFamily="@font/roboto_black"
         android:gravity="center"
@@ -555,7 +555,7 @@
         android:layout_width="49dp"
         android:layout_height="21dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="9dp"
         android:gravity="center"
         android:text="MY"
         android:textSize="20sp"
