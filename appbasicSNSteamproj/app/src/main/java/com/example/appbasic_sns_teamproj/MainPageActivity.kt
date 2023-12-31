@@ -37,6 +37,7 @@ class MainPageActivity : AppCompatActivity() {
 //        myProfile 변수에 ID가 myProfile인 ImageButton를 할당한다.
 
 
+        //화면에 첫번째 게시글 입력시 첫번째 게시글의 디테일 액티비티로 이동 + 트랙 정보를 디테일 페이지로 넘김
         val btnDetail: Button = findViewById(R.id.btnDetail)
         btnDetail.setOnClickListener {
             val appTrackText: String = appTrack.text.toString()
@@ -46,6 +47,7 @@ class MainPageActivity : AppCompatActivity() {
         }
 
 
+        //화면에 두번째 게시글 입력시 두번째 게시글의 디테일 액티비티로 이동 + 트랙 정보를 디테일 페이지로 넘김
         val btnDetail2: Button = findViewById(R.id.btnDetail2)
         btnDetail2.setOnClickListener {
             val iosTrackText: String = iosTrack.text.toString()
@@ -54,6 +56,8 @@ class MainPageActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
+        //화면에 세번째 게시글 입력시 세번째 게시글의 디테일 액티비티로 이동 + 트랙 정보를 디테일 페이지로 넘김
         val btnDetail3: Button = findViewById(R.id.btnDetail3)
         btnDetail3.setOnClickListener {
             val unityTrackText: String = unityTrack.text.toString()
@@ -62,6 +66,8 @@ class MainPageActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
+        //화면에 네번째 게시글 입력시 네번째 게시글의 디테일 액티비티로 이동 + 트랙 정보를 디테일 페이지로 넘김
         val btnDetail4: Button = findViewById(R.id.btnDetail4)
         btnDetail4.setOnClickListener {
             val aiTrackText: String = aiTrack.text.toString()
@@ -69,6 +75,8 @@ class MainPageActivity : AppCompatActivity() {
             intent.putExtra("username", aiTrackText)
             startActivity(intent)
         }
+
+
 //        ID가 btnDetail인 Button을 찾아 btnDetail 변수에 할당하고,
         //        해당 버튼에 클릭 리스너를 설정한다. 버튼이 클릭되면
         //        DetailPageActivity로 이동하면서

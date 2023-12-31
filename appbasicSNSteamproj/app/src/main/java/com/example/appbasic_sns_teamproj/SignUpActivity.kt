@@ -134,7 +134,11 @@ class SignUpActivity : AppCompatActivity() {
             OnFocusChangeListener { v, hasFocus -> if (!hasFocus) check(v!!) }
         arrET.forEach { it.onFocusChangeListener = onFocusChangeListener }
 
+
+        //회원가입 버튼이 눌렸을 때 회원가입한 정보를 DB에 저장하고 새로 생성한 ID, PW을 SignIn액티비티로 정보를 넘김
         btn.setOnClickListener {
+
+            //SignIn액티비티로 ID, PW 정보를 넘김
             var id = if (spinner.isVisible) {
                 "${etMail.text}@${spinner.selectedItem}"
             } else {
