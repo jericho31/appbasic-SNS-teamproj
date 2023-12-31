@@ -155,7 +155,7 @@ class SignUpActivity : AppCompatActivity() {
                 etName.text.toString(),
                 spinnerTrack.selectedItem.toString()
             )
-            DB.users[newUser.id] = newUser
+            MemberManager.addMember(newUser)
 
             setResult(RESULT_OK, intent)
             finish()

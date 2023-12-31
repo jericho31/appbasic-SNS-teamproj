@@ -41,9 +41,10 @@ class SignInActivity : AppCompatActivity() {
                 Toast.makeText(this, "아이디를 확인해주세요", Toast.LENGTH_SHORT).show()
             } else if (pw == "") {
                 Toast.makeText(this, "패스워드를 확인해주세요", Toast.LENGTH_SHORT).show()
-            } else if (!DB.users.contains(id)) {
+            } else if (MemberManager.getMember(id) == null) {
+//            } else if (!MemberManager.users.contains(id)) {
                 Toast.makeText(this, "등록되지 않은 아이디입니다", Toast.LENGTH_SHORT).show()
-            } else if (DB.users[id]!!.pw != pw) {
+            } else if (MemberManager.getMember(id)!!.pw != pw) {
                 Toast.makeText(this, "비밀번호가 틀렸습니다", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, "환영합니다", Toast.LENGTH_SHORT).show()
@@ -51,7 +52,7 @@ class SignInActivity : AppCompatActivity() {
                 startActivity(intent)
                 
                 // 유저 값 설정 - LYJ
-                CurrentUser.user = DB.users[id]
+                CurrentUser.user = MemberManager.getMember(id)
             }
         }
     }
