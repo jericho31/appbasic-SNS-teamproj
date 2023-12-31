@@ -1,5 +1,9 @@
 <resources>
 <!--    이름 통일-->
+
+<!--    사람들이 올린 계시글을 제외하고 항상 화면에 표시되는 것들을 변역할 수 있도록 함
+설정에서 언어를 영어 또는 한국어로 변경시에 변역이 자동으로 완성됨-->
+
     <string name="app_name" translatable="false">appbasic-SNS-teamproj</string>
     <string name="atSign" translatable="false">\@</string>
     <string name="lng_txt_korean" translatable="false">한국어 (Korean)</string>
@@ -49,6 +53,14 @@
     <string name="input_comment_hint">댓글을 적어주세요</string>
     <string name="like">유익해요!</string>
     <string name="back">뒤로가기</string>
+    <string name="my_page_markinpost">좋아요한 글</string>
+    <string name="search_title">관심있는 내용을 검색해보세요!</string>
+    <string name="coding_story">코딩이야기</string>
+    <string name="daily">일상</string>
+    <string name="writing">글쓰기</string>
+    <string name="sparta_forest">스파르타 숲</string>
+    <string name="present_connector">현재 접속자 : 3</string>
+
 
 
     <string name="main_detail1_title" translatable="false">스파르타 친구들 새해 잘 보내!</string>
@@ -75,14 +87,6 @@
     <string name="main_detail4_comment1" translatable="false">1956년부터 AI라는 용어를 사용하기 시작했다네</string>
     <string name="main_detail4_comment1_1" translatable="false">그리고 이듬해에 초기 인공신경망 퍼셉트론을 만들었어</string>
     <string name="main_detail4_comment2" translatable="false">최초의 AI는 아니지만 AI를 탑제한 최초의 로봇 쉐이키가 66년에 만들어졌어</string>
-    <string name="my_page_markinpost">좋아요한 글</string>
-    <string name="search_title">관심있는 내용을 검색해보세요!</string>
-    <string name="coding_story">코딩이야기</string>
-    <string name="daily">일상</string>
-    <string name="writing">글쓰기</string>
-    <string name="sparta_forest">스파르타 숲</string>
-    <string name="present_connector">현재 접속자 : 3</string>
-
 
 <!--    KGW-->
 
