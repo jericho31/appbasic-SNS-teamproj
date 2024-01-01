@@ -27,8 +27,8 @@ class MyPageActivity : AppCompatActivity() {
             Toast.makeText(this, "오류: 로그인 되어있지 않습니다.", Toast.LENGTH_SHORT).show()
         } else {
             val user = CurrentUser.user
-            tvId.text = "아이디 : " + (CurrentUser.user?.id ?: "not signed in")
-            tvTrack.text = "트랙 : " + (CurrentUser.user?.track ?: "not signed in")
+            tvId.text = "${getString(R.string.txt_id)} : " + (CurrentUser.user?.id ?: "not signed in")
+            tvTrack.text = "${getString(R.string.txt_track)} : " + (CurrentUser.user?.track ?: "not signed in")
         }
 
         // 프로필사진 분류

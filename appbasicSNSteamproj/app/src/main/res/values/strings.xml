@@ -11,7 +11,7 @@
 
 
     <string name="txt_track">트랙</string>
-    <string name="txt_id">아이디(이메일)</string>
+    <string name="txt_id">아이디</string>
     <string name="txt_pw">비밀번호</string>
     <string name="txt_modify">개인정보 수정</string>
     <string name="txt_withdraw">회원탈퇴</string>
@@ -34,7 +34,7 @@
     <string name="my_page_comment">작성댓글</string>
     <string name="my_page_commentingpost">댓글단 글</string>
     <string name="my_page_markingpost">좋아요한 글</string>
-    <string name="notice_content">어서오세요 르탄이분들!</string>
+    <string name="notice_content">[오픈 이벤트] 오늘 가입하는 르탄이에게 10억 포인트 증정!</string>
     <string name="notice_title">공지</string>
     <string name="track_Android" translatable="false">Android</string>
     <string name="track_IOS" translatable="false">IOS</string>
