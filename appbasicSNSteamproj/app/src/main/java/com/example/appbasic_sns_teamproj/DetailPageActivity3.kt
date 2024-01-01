@@ -5,6 +5,7 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.LinearLayout
@@ -42,6 +43,12 @@ class DetailPageActivity3 : AppCompatActivity() {
             // 뒤로가기 클릭시 메인으로 이동
             finish()
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN)
     }
 
     override fun onPause() {

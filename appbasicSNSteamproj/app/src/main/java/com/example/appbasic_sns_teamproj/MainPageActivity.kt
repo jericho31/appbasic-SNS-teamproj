@@ -41,18 +41,6 @@ class MainPageActivity : AppCompatActivity() {
 //        appTrack 변수에 ID가 appTrack인 TextView를 할당하고,
 //        myProfile 변수에 ID가 myProfile인 ImageButton를 할당한다.
 
-
-//        프로필사진 분류
-        val myProfile = findViewById<ImageButton>(R.id.myProfile)
-        val image = when (CurrentUser.user?.track) {
-            "Android" -> R.drawable.sparta
-            "iOS" -> R.drawable.sparta2
-            "Unity" -> R.drawable.sparta3
-            else -> R.drawable.snake_sparta
-        }
-        myProfile.setImageDrawable(ResourcesCompat.getDrawable(resources, image, null))
-
-
         // 각 트랙에 대한 상세 페이지로 이동하는 버튼에 클릭 리스너 설정
         // 글을 누르면 글에 대한 디테일 페이지로 이동
         //화면에 첫번째 게시글 입력시
@@ -108,7 +96,7 @@ class MainPageActivity : AppCompatActivity() {
             if (CurrentUser.isSignedIn()) {
                 Log.d("MyApp", "User is signed in: ${CurrentUser.isSignedIn()}")
 //                 로그인 상태일 때
-//                 이미지 변경은 버튼 클릭할 때가 아니라, 로그인 성공했을 때 해줘야 함.
+//                 프사 변경은 로그인 성공 시와 로그아웃 시 모두 해주어야 하므로 onResume에서 처리.
 
 //                 프로필 이미지 클릭 시 마이페이지로 이동
                 val intent = Intent(this, MyPageActivity::class.java)
@@ -143,6 +131,21 @@ class MainPageActivity : AppCompatActivity() {
 //             })는 이 함수 블록을 닫는다.
             .show()
     }
+
+    override fun onResume() {
+        super.onResume()
+
+        // 로그인 페이지에서 돌아와서 로그인이 성공했으면 이미지 변경.
+        val image = when (CurrentUser.user?.track) {
+            null -> R.drawable.login
+            "Android" -> R.drawable.sparta
+            "iOS" -> R.drawable.sparta2
+            "Unity" -> R.drawable.sparta3
+            else -> R.drawable.snake_sparta
+        }
+        myProfile.setImageResource(image)
+    }
+
 }
 
 

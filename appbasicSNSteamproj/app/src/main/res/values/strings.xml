@@ -87,8 +87,9 @@
     <string name="main_detail4_comment1" translatable="false">1956년부터 AI라는 용어를 사용하기 시작했다네</string>
     <string name="main_detail4_comment1_1" translatable="false">그리고 이듬해에 초기 인공신경망 퍼셉트론을 만들었어</string>
     <string name="main_detail4_comment2" translatable="false">최초의 AI는 아니지만 AI를 탑제한 최초의 로봇 쉐이키가 66년에 만들어졌어</string>
+    <string name="txt_logout">로그아웃</string>
 
-<!--    KGW-->
+    <!--    KGW-->
 
 
 

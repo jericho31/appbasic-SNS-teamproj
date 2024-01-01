@@ -51,7 +51,6 @@ class SignUpActivity : AppCompatActivity() {
     private val etPw: EditText by lazy { findViewById(R.id.et_chall_password) }
     private val tvPwWarn: TextView by lazy { findViewById(R.id.tv_chall_password_warn) }
     private val tvPwLength: TextView by lazy { findViewById(R.id.tv_chall_password_length) }
-    private val tvVerifyWarn: TextView by lazy { findViewById(R.id.tv_chall_verify_warn) }
     private val btn: Button by lazy { findViewById(R.id.btn_chall_signup) }
     private val spinner: Spinner by lazy { findViewById(R.id.spinner_chall_mail) }
     private val spinnerTrack: Spinner by lazy { findViewById(R.id.spinner_signUp_track) }
@@ -62,59 +61,12 @@ class SignUpActivity : AppCompatActivity() {
     private var okName = false
     private var okMail = false
 
-    // TODO: [jericho] okDomain이랑 스피너 visible 두 조건 어떻게 잘 좀 통합
     private var okDomain = false
     private var okPw = false
 
     private val anim = AlphaAnimation(0.125f, 0.625f).apply {
         duration = 100L
         repeatCount = 3
-    }
-    private val pwWatcher by lazy {
-        object : TextWatcher {
-            private var beforePw = ""
-            private var beforeCursor = 0
-
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                Log.d(TAG, "before:: start: $start, count: $count, after: $after")
-                Log.d(TAG, "$s/selection: ${etPw.selectionStart}, ${etPw.selectionEnd}")
-                beforePw = etPw.text.toString()
-                beforeCursor = start
-            }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                Log.d(
-                    TAG,
-                    "on:: start: $start, before: $before, count: $count"
-                )
-                Log.d(
-                    TAG,
-                    "$s/selection: ${etPw.selectionStart}, ${etPw.selectionEnd}"
-                )
-            }
-
-            // 사용자의 입력을 막아버리는 것은 UX상 좋지 않다. 안내를 해주는 편이 좋다.
-            // 한글은 조합때문에 입력받고 무시하기 어려울텐데, inputType textPassword 가 알아서 막아주네.
-            // 원표시₩는 그냥 입력이 안됨.
-            override fun afterTextChanged(s: Editable?) {
-                Log.d(TAG, "after:: $s/selection: ${etPw.selectionStart}, ${etPw.selectionEnd}")
-                if (!pwInputPattern.matcher(etPw.text.toString()).matches()) {
-                    // warn 바꾸는 쪽으로. 그냥 바꾸면 잘 안보일듯. 깜빡여야. 그러려면 코루틴 블라킹으로...?
-                    // AlphaAnimation 이라는 좋은 기능이 있었다. 역시 구글갓
-                    tvPwWarn.text = "입력할 수 없는 문자입니다."
-                    tvPwWarn.startAnimation(anim)
-                    // TODO: [jericho] 입력 무시 -> 에러 안내로 변경
-                    etPw.removeTextChangedListener(this)
-                    etPw.setText(beforePw)
-                    etPw.setSelection(beforeCursor)
-                    etPw.addTextChangedListener(this)
-                    return
-                }
-                "${etPw.text.length}/16".also { tvPwLength.text = it }
-                check(etPw)
-                Log.d(TAG, "== back from check ==")
-            }
-        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -128,8 +80,7 @@ class SignUpActivity : AppCompatActivity() {
         spinnerTrack.adapter =
             ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, tracks)
 
-        arrET.forEach { et -> if ((et == etPw).not()) et.addTextChangedListener { check(et) } }
-        etPw.addTextChangedListener(pwWatcher)
+        arrET.forEach { et -> et.addTextChangedListener { check(et) } }
         val onFocusChangeListener =
             OnFocusChangeListener { v, hasFocus -> if (!hasFocus) check(v!!) }
         arrET.forEach { it.onFocusChangeListener = onFocusChangeListener }
@@ -176,8 +127,6 @@ class SignUpActivity : AppCompatActivity() {
 
                 override fun onNothingSelected(parent: AdapterView<*>?) {}
             }
-
-
     }
 
     override fun onPause() {
@@ -220,8 +169,13 @@ class SignUpActivity : AppCompatActivity() {
 
             etPw -> {
                 val pw = etPw.text.toString()
+                "${pw.length}/16".also { tvPwLength.text = it }
                 if (etPw.text.isEmpty()) {
                     tvPwWarn.text = "비밀번호를 입력해주세요."
+                    okPw = false
+                } else if (!pwInputPattern.matcher(etPw.text.toString()).matches()) {
+                    tvPwWarn.text = "입력할 수 없는 문자가 포함되었습니다."
+                    tvPwWarn.startAnimation(anim)
                     okPw = false
                 } else if (pw.length < 8) {
                     tvPwWarn.text = "비밀번호는 8자리 이상이어야 합니다."

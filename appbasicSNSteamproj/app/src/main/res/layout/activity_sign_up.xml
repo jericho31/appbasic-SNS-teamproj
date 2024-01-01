@@ -16,33 +16,9 @@
         app:srcCompat="@drawable/welcome" />
 
     <TextView
-        android:id="@+id/tv_sign_up_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_name"
-        android:textSize="18sp" />
-
-    <EditText
-        android:id="@+id/et_chall_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:ems="10"
-        android:hint="@string/txt_getName"
-        android:inputType="text" />
-
-    <TextView
-        android:id="@+id/tv_chall_name_warn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:textColor="@color/design_default_color_error" />
-
-    <TextView
         android:id="@+id/textView6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="@string/txt_email"
         android:textSize="18sp" />
 
@@ -132,6 +108,30 @@
             android:text="0/16"
             android:textAlignment="textEnd" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_sign_up_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/txt_name"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/et_chall_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:ems="10"
+        android:hint="@string/txt_getName"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/tv_chall_name_warn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/design_default_color_error" />
 
     <TextView
         android:id="@+id/textView12"

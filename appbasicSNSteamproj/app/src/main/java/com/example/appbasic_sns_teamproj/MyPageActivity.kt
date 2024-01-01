@@ -57,6 +57,7 @@ class MyPageActivity : AppCompatActivity() {
         val btnLanguageSetting = findViewById<Button>(R.id.btn_languageSetting)
         val btnBackToMain = findViewById<ImageView>(R.id.iv_return)
         val btnGoToDetail = findViewById<Button>(R.id.btn_goDetail)
+        val btnLogout = findViewById<Button>(R.id.btn_logout)
 
         btnLanguageSetting.setOnClickListener{
             val intent = Intent(this, LanguageSettingActivity::class.java)
@@ -70,6 +71,11 @@ class MyPageActivity : AppCompatActivity() {
         btnGoToDetail.setOnClickListener{
             val intent = Intent(this, DetailPageActivity::class.java)
             startActivity(intent)
+        }
+
+        btnLogout.setOnClickListener{
+            CurrentUser.user = null
+            finish()
         }
 
     }

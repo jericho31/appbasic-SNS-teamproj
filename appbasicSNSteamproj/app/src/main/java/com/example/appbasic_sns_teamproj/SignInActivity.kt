@@ -44,15 +44,12 @@ class SignInActivity : AppCompatActivity() {
             } else if (pw == "") {
                 Toast.makeText(this, "패스워드를 확인해주세요", Toast.LENGTH_SHORT).show()
             } else if (MemberManager.getMember(id) == null) {
-//            } else if (!MemberManager.users.contains(id)) {
                 Toast.makeText(this, "등록되지 않은 아이디입니다", Toast.LENGTH_SHORT).show()
             } else if (MemberManager.getMember(id)!!.pw != pw) {
                 Toast.makeText(this, "비밀번호가 틀렸습니다", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, "환영합니다", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, MainPageActivity::class.java)
-                startActivity(intent)
-
+                finish()
                 // 유저 값 설정 - LYJ
                 CurrentUser.user = MemberManager.getMember(id)
             }
