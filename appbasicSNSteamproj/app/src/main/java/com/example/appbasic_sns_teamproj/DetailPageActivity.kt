@@ -18,7 +18,7 @@ class DetailPageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_page)
 
-        this.setSlide(Direction.UP, Direction.STAY)
+        setSlide(Direction.UP, Direction.STAY)
 
         val btnBack: Button = findViewById(R.id.btnBack)
         val dtAppTrack: TextView = findViewById(R.id.dtAppTrack)
@@ -45,11 +45,10 @@ class DetailPageActivity : AppCompatActivity() {
         }
     }
 
-    override fun onBackPressed() {
-        super.onBackPressed()
+    override fun onPause() {
+        super.onPause()
 
         setSlide(Direction.STAY, Direction.UP)
-        // 뒤로가기 버튼 말고 휴대폰에서 Back 버튼 해야 함.
     }
 }
 

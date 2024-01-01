@@ -23,7 +23,7 @@ class DetailPageActivity3 : AppCompatActivity() {
         val buttonLike = findViewById<Button>(R.id.buttonLike)
         val textViewLikeCount = findViewById<TextView>(R.id.textViewLikeCount)
 
-        this.setSlide(Direction.UP, Direction.STAY)
+        setSlide(Direction.UP, Direction.STAY)
 
 
         buttonLike.setOnClickListener {
@@ -40,15 +40,14 @@ class DetailPageActivity3 : AppCompatActivity() {
         dtUnityTrack.text = username3
         btnBack.setOnClickListener {
             // 뒤로가기 클릭시 메인으로 이동
-            val intent = Intent(this@DetailPageActivity3, MainPageActivity::class.java)
-            startActivity(intent)
+            finish()
         }
     }
-    override fun onBackPressed() {
-        super.onBackPressed()
+
+    override fun onPause() {
+        super.onPause()
 
         setSlide(Direction.STAY, Direction.UP)
-        // 뒤로가기 버튼 말고 휴대폰에서 Back 버튼 해야 함.
     }
 }
 

@@ -18,6 +18,8 @@ class SignInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
 
+        setSlide(Direction.RIGHT, Direction.STAY)
+
         val btn_goSignUpActivity = findViewById<Button>(R.id.btn_goSignUpActivity)
 
         editTv_id = findViewById(R.id.editTv_id)
@@ -50,11 +52,17 @@ class SignInActivity : AppCompatActivity() {
                 Toast.makeText(this, "환영합니다", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, MainPageActivity::class.java)
                 startActivity(intent)
-                
+
                 // 유저 값 설정 - LYJ
                 CurrentUser.user = MemberManager.getMember(id)
             }
         }
+    }
+
+    override fun onPause() {
+        super.onPause()
+
+        setSlide(Direction.STAY, Direction.RIGHT)
     }
 
     //SignUp에서 입력한 아이디와 비밀번호를 받아오는 함수
