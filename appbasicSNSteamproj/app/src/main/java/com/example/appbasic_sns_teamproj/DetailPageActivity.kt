@@ -19,7 +19,7 @@ class DetailPageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_page)
 
-        this.setSlide(Direction.UP, Direction.STAY)
+        setSlide(Direction.UP, Direction.STAY)
 
         // UI 요소 초기화
         val btnBack: Button = findViewById(R.id.btnBack)
@@ -35,10 +35,10 @@ class DetailPageActivity : AppCompatActivity() {
 
             // 새로운 좋아요 수로 UI 업데이트
             textViewLikeCount.text = "$likeCount"
-        }
 
-        // Intent에서 extra 데이터 가져오기
-        // 가져온 데이터를 화면에 표시
+        }
+// Intent에서 extra 데이터 가져오기
+// 가져온 데이터를 화면에 표시
         dtAppTrack.text = username
 
         // 뒤로가기 버튼 클릭 이벤트
@@ -48,11 +48,14 @@ class DetailPageActivity : AppCompatActivity() {
         }
     }
 
-    override fun onBackPressed() {
-        super.onBackPressed()
+    override fun onPause() {
+        super.onPause()
 
         // 뒤로가기 버튼을 누를 때 슬라이드 효과 적용
         setSlide(Direction.STAY, Direction.UP)
-        // 뒤로가기 버튼 말고 휴대폰에서 Back 버튼을 눌러야 함.
     }
 }
+
+
+
+

@@ -343,7 +343,7 @@
                 android:layout_alignParentBottom="true"
                 android:fontFamily="@font/roboto_black"
                 android:gravity="center|start"
-                android:text="고마워!"
+                android:text="@string/main_detail1_comment1_1"
                 android:textSize="24sp"
                 app:layout_constraintStart_toEndOf="@+id/imageView11"
                 app:layout_constraintTop_toBottomOf="@+id/textView14" />
@@ -356,7 +356,7 @@
                 android:layout_alignParentBottom="true"
                 android:fontFamily="@font/roboto_black"
                 android:gravity="center|start"
-                android:text="매니저님들도고생하셨어요!"
+                android:text="@string/main_detail1_comment1_2"
                 android:textSize="24sp"
                 app:layout_constraintStart_toEndOf="@+id/imageView7"
                 app:layout_constraintTop_toBottomOf="@+id/textView16" />
@@ -370,7 +370,7 @@
                 android:layout_marginTop="1dp"
                 android:fontFamily="@font/roboto_black"
                 android:gravity="center|start"
-                android:text="Unity도 화이팅!"
+                android:text="@string/main_detail1_comment2_1"
                 android:textSize="24sp"
                 app:layout_constraintStart_toEndOf="@+id/imageView9"
                 app:layout_constraintTop_toBottomOf="@+id/textView23" />
@@ -383,7 +383,7 @@
                 android:layout_alignParentBottom="true"
                 android:fontFamily="@font/roboto_black"
                 android:gravity="center|start"
-                android:text="IOS 화이팅!"
+                android:text="@string/main_detail1_comment2"
                 android:textSize="24sp"
                 app:layout_constraintStart_toEndOf="@+id/imageView7"
                 app:layout_constraintTop_toBottomOf="@+id/textView19" />

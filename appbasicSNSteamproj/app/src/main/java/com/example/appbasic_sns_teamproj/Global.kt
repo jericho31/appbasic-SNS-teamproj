@@ -12,12 +12,19 @@ object CurrentUser {
     fun isSignedIn() = user != null
 }
 
-object DB {
-    val users = mutableMapOf<String, User>(
+object MemberManager {
+    private val users = mutableMapOf<String, User>(
         // admin 기본으로 넣어둠
         Pair(
             "admin",
             User("admin", "admin", "admin", "admin")
         )
     )
+
+    fun addMember(user: User) {
+        users[user.id] = user
+    }
+
+    fun getMember(id: String) = users[id]
+    fun removeMember(id: String) = users.remove(id)
 }

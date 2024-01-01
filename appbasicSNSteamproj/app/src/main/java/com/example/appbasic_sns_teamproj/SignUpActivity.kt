@@ -121,7 +121,7 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
-        this.setSlide(Direction.RIGHT, Direction.STAY)
+        setSlide(Direction.RIGHT, Direction.STAY)
 
         // 처음에 기본으로 첫번째꺼가 선택되어 있는 이유는 어레이어댑터라서 그런가?
         spinner.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, mails)
@@ -134,13 +134,17 @@ class SignUpActivity : AppCompatActivity() {
             OnFocusChangeListener { v, hasFocus -> if (!hasFocus) check(v!!) }
         arrET.forEach { it.onFocusChangeListener = onFocusChangeListener }
 
+
+        //회원가입 버튼이 눌렸을 때 회원가입한 정보를 DB에 저장하고 새로 생성한 ID, PW을 SignIn액티비티로 정보를 넘김
         btn.setOnClickListener {
+
+            //SignIn액티비티로 ID, PW 정보를 넘김
             var id = if (spinner.isVisible) {
                 "${etMail.text}@${spinner.selectedItem}"
             } else {
                 "${etMail.text}@${etDomain.text}"
             }
-            intent.putExtra(Extra.id, "${etMail.text}@${spinner.selectedItem}")
+            intent.putExtra(Extra.id, id)
             intent.putExtra(Extra.password, etPw.text.toString())
             intent.putExtra("track", spinnerTrack.selectedItem.toString())
 
@@ -151,7 +155,7 @@ class SignUpActivity : AppCompatActivity() {
                 etName.text.toString(),
                 spinnerTrack.selectedItem.toString()
             )
-            DB.users[newUser.id] = newUser
+            MemberManager.addMember(newUser)
 
             setResult(RESULT_OK, intent)
             finish()
@@ -176,8 +180,8 @@ class SignUpActivity : AppCompatActivity() {
 
     }
 
-    override fun onBackPressed() {
-        super.onBackPressed()
+    override fun onPause() {
+        super.onPause()
 
         setSlide(Direction.STAY, Direction.RIGHT)
     }
@@ -205,7 +209,7 @@ class SignUpActivity : AppCompatActivity() {
                 okDomain = etDomain.text.isNotEmpty()
 
                 if (spinner.isVisible) {
-                    if (!okMail) tvMailWarn.text = "비밀번호를 입력해주세요."
+                    if (!okMail) tvMailWarn.text = "이메일을 입력해주세요."
                     else tvMailWarn.text = ""
                 } else {
                     if (!okMail) tvMailWarn.text = "이메일${if (!okDomain) "과 도메인" else ""}을 입력해주세요."
