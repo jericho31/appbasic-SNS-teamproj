@@ -19,17 +19,6 @@
     <string name="txt_pwCheck">Check password</string>
     <string name="txt_getPwCheck">enter your password again</string>
 
-    <!--    <string name="app_name">appbasic-SNS-teamproj</string>-->
-    <!--    <string name="profil_txt_track">Track</string>-->
-    <!--    <string name="profil_txt_id">ID</string>-->
-    <!--    <string name="profil_btn_setting">Language Setting</string>-->
-    <!--    <string name="profil_btn_revise">Modifying personal info</string>-->
-    <!--    <string name="profil_btn_withdraw">Membership Withdrawal</string>-->
-    <!--    <string name="lng_txt_setting">Language Setting</string>-->ㅁ
-    <!--    <string name="KOR_pw_hint">Password</string>-->
-    <!--    <string name="KOR_logInButton">LogIn</string>-->
-    <!--    <string name="KOR_signUpButton">SignUp</string>-->
-    <!--    <string name="KOR_signUpQuestion">Is it your first playing this app?</string>-->
     <string name="lng_btn_check">check</string>
     <string name="my_page_time">1 days ago</string>
     <string name="my_page_post">Posts</string>
@@ -50,4 +39,18 @@
     <string name="notice_title">notification</string>
     <string name="present_connector">Present connector : 3</string>
     <string name="txt_logout">Log out</string>
+    <string name="signup_pw">Please enter a password.</string>
+    <string name="signup_pw_check1">Contains characters that cannot be entered.</string>
+    <string name="signup_pw_check2">Password must be at least 8 characters long.</string>
+    <string name="signup_pw_check3">" Password must be 16 characters or less."</string>
+    <string name="signup_pw_check4">8 to 16 characters mixed with English letters, numbers, and special characters</string>
+    <string name="signup_id">" Please enter your E-mail"</string>
+    <string name="signup_domain">" Please enter your domain"</string>
+    <string name="signup_name">" Please enter your name"</string>
+    <string name="signin_id_check">Please check your ID</string>
+    <string name="signin_pw_check">Please check your password</string>
+    <string name="signin_pw_check2">Password is incorrect</string>
+    <string name="signin_id_check2">" This ID is not registered"</string>
+    <string name="signin_welcome">Welcom</string>
+    <string name="domain">Domain</string>
 </resources>

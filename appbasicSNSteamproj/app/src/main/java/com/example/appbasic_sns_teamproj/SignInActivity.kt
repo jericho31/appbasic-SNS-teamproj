@@ -40,15 +40,15 @@ class SignInActivity : AppCompatActivity() {
             val id = editTv_id.text.toString()
             val pw = editTv_pw.text.toString()
             if (id == "") {
-                Toast.makeText(this, "아이디를 확인해주세요", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.signin_id_check), Toast.LENGTH_SHORT).show()
             } else if (pw == "") {
-                Toast.makeText(this, "패스워드를 확인해주세요", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.signin_pw_check), Toast.LENGTH_SHORT).show()
             } else if (MemberManager.getMember(id) == null) {
-                Toast.makeText(this, "등록되지 않은 아이디입니다", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.signin_id_check2), Toast.LENGTH_SHORT).show()
             } else if (MemberManager.getMember(id)!!.pw != pw) {
-                Toast.makeText(this, "비밀번호가 틀렸습니다", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.signin_pw_check2), Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "환영합니다", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.signin_welcome), Toast.LENGTH_SHORT).show()
                 finish()
                 // 유저 값 설정 - LYJ
                 CurrentUser.user = MemberManager.getMember(id)
