@@ -88,8 +88,26 @@
     <string name="main_detail4_comment1_1" translatable="false">그리고 이듬해에 초기 인공신경망 퍼셉트론을 만들었어</string>
     <string name="main_detail4_comment2" translatable="false">최초의 AI는 아니지만 AI를 탑제한 최초의 로봇 쉐이키가 66년에 만들어졌어</string>
     <string name="txt_logout">로그아웃</string>
+    <string name="Quotation_mack" translatable="false">""</string>
+    <string name="domain">도메인</string>
 
-    <!--    KGW-->
+    <string name="signup_pw">비밀번호를 입력해주세요.</string>
+    <string name="signup_pw_check1">입력할 수 없는 문자가 포함되었습니다.</string>
+    <string name="signup_pw_check2">비밀번호는 8자리 이상이어야 합니다.</string>
+    <string name="signup_pw_check3">비밀번호는 16자리 이하여야 합니다.</string>
+    <string name="signup_pw_check4">영문, 숫자, 특수문자 혼합 8~16자</string>
+
+    <string name="signup_id">이메일을 입력해주세요.</string>
+    <string name="signup_domain">도메인을 입력해주세요.</string>
+    <string name="signup_name">이름을 입력해주세요.</string>
+
+    <string name="signin_id_check">아이디를 확인해주세요</string>
+    <string name="signin_pw_check">패스워드를 확인해주세요</string>
+    <string name="signin_pw_check2">비밀번호가 틀렸습니다</string>
+    <string name="signin_id_check2">등록되지 않은 아이디입니다</string>
+    <string name="signin_welcome">환영합니다</string>
+
+<!--   영문, 숫자, 특수문자 혼합 8~16자 KGW-->
 
 
 

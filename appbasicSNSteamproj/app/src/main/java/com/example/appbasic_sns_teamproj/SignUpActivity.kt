@@ -1,6 +1,7 @@
 package com.example.appbasic_sns_teamproj
 
 import android.os.Bundle
+import android.provider.Settings.Global.getString
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
@@ -39,7 +40,7 @@ class SignUpActivity : AppCompatActivity() {
 
     companion object {
         // 나중엔 서버에서 받아오는 식.
-        val mails = arrayOf("gmail.com", "kakao.com", "naver.com", "직접 입력")
+        val mails = arrayOf("gmail.com", "kakao.com", "naver.com", "직접입력")
         val tracks = arrayOf("Android", "iOS", "Unity", "기타")
     }
 
@@ -145,10 +146,10 @@ class SignUpActivity : AppCompatActivity() {
         when (v) {
             etName -> {
                 if (etName.text.isEmpty()) {
-                    tvNameWarn.text = "이름을 입력해주세요."
+                    tvNameWarn.text = getString(R.string.signup_name)
                     okName = false
                 } else {
-                    tvNameWarn.text = ""
+                    tvNameWarn.text = getString(R.string.Quotation_mack)
                     okName = true
                 }
             }
@@ -158,12 +159,12 @@ class SignUpActivity : AppCompatActivity() {
                 okDomain = etDomain.text.isNotEmpty()
 
                 if (spinner.isVisible) {
-                    if (!okMail) tvMailWarn.text = "이메일을 입력해주세요."
-                    else tvMailWarn.text = ""
+                    if (!okMail) tvMailWarn.text = getString(R.string.signup_id)
+                    else tvMailWarn.text = getString(R.string.Quotation_mack)
                 } else {
                     if (!okMail) tvMailWarn.text = "이메일${if (!okDomain) "과 도메인" else ""}을 입력해주세요."
-                    else if (!okDomain) tvMailWarn.text = "도메인을 입력해주세요."
-                    else tvMailWarn.text = ""
+                    else if (!okDomain) tvMailWarn.text = getString(R.string.signup_domain)
+                    else tvMailWarn.text = getString(R.string.Quotation_mack)
                 }
             }
 
@@ -171,23 +172,23 @@ class SignUpActivity : AppCompatActivity() {
                 val pw = etPw.text.toString()
                 "${pw.length}/16".also { tvPwLength.text = it }
                 if (etPw.text.isEmpty()) {
-                    tvPwWarn.text = "비밀번호를 입력해주세요."
+                    tvPwWarn.text = getString(R.string.signup_pw)
                     okPw = false
                 } else if (!pwInputPattern.matcher(etPw.text.toString()).matches()) {
-                    tvPwWarn.text = "입력할 수 없는 문자가 포함되었습니다."
+                    tvPwWarn.text = getString(R.string.signup_pw_check1)
                     tvPwWarn.startAnimation(anim)
                     okPw = false
                 } else if (pw.length < 8) {
-                    tvPwWarn.text = "비밀번호는 8자리 이상이어야 합니다."
+                    tvPwWarn.text = getString(R.string.signup_pw_check2)
                     okPw = false
                 } else if (pw.length > 16) {
-                    tvPwWarn.text = "비밀번호는 16자리 이하여야 합니다."
+                    tvPwWarn.text = getString(R.string.signup_pw_check3)
                     okPw = false
                 } else if (!pwFinalPattern.matcher(pw).matches()) {
-                    tvPwWarn.text = "영문, 숫자, 특수문자 혼합 8~16자"
+                    tvPwWarn.text = getString(R.string.signup_pw_check4)
                     okPw = false
                 } else {
-                    tvPwWarn.text = ""
+                    tvPwWarn.text = getString(R.string.Quotation_mack)
                     okPw = true
                 }
             }
