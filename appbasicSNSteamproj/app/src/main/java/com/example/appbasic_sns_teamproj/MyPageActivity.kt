@@ -10,17 +10,20 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.res.ResourcesCompat
+import com.example.appbasic_sns_teamproj.databinding.ActivityMyPageBinding
 
 class MyPageActivity : AppCompatActivity() {
     private val tvId:TextView by lazy { findViewById<TextView>(R.id.txt_id) }
     private val tvTrack:TextView by lazy { findViewById<TextView>(R.id.txt_track) }
     private lateinit var tvTrackName: TextView
     private lateinit var tvWritting: TextView
+    private lateinit var binding: ActivityMyPageBinding
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_my_page)
+        binding = ActivityMyPageBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         // 객체에서 정보 받아오기
         if (!CurrentUser.isSignedIn()) {
@@ -54,26 +57,26 @@ class MyPageActivity : AppCompatActivity() {
         }
 
         // 버튼 클릭
-        val btnLanguageSetting = findViewById<Button>(R.id.btn_languageSetting)
-        val btnBackToMain = findViewById<ImageView>(R.id.iv_return)
-        val btnGoToDetail = findViewById<Button>(R.id.btn_goDetail)
-        val btnLogout = findViewById<Button>(R.id.btn_logout)
+//        val btnLanguageSetting = findViewById<Button>(R.id.btn_languageSetting)
+//        val btnBackToMain = findViewById<ImageView>(R.id.iv_return)
+//        val btnGoToDetail = findViewById<Button>(R.id.btn_goDetail)
+//        val btnLogout = findViewById<Button>(R.id.btn_logout)
 
-        btnLanguageSetting.setOnClickListener{
+        binding.btnLanguageSetting.setOnClickListener{
             val intent = Intent(this, LanguageSettingActivity::class.java)
             startActivity(intent)
         }
 
-        btnBackToMain.setOnClickListener{
+        binding.ivReturn.setOnClickListener{
             finish()
         }
 
-        btnGoToDetail.setOnClickListener{
+        binding.btnGoDetail.setOnClickListener{
             val intent = Intent(this, DetailPageActivity::class.java)
             startActivity(intent)
         }
 
-        btnLogout.setOnClickListener{
+        binding.btnLogout.setOnClickListener{
             CurrentUser.user = null
             finish()
         }
