@@ -21,7 +21,6 @@ class DetailPageActivity4 : AppCompatActivity() {
         //asdf
         // aa2
         // dev2 work
-        // afeaf
         val btnBack: Button = findViewById(R.id.btnBack)
         val dtAiTrack: TextView = findViewById(R.id.dtAiTrack)
         val buttonLike = findViewById<Button>(R.id.buttonLike)
@@ -30,10 +29,8 @@ class DetailPageActivity4 : AppCompatActivity() {
 
         setSlide(Direction.UP, Direction.STAY)
 
-        val a = 1
-        println(a)
-        a += 1
-        println(a)
+        val c = 3
+        println(c)
 
         buttonLike.setOnClickListener {
             // Increment the like count
