@@ -18,7 +18,7 @@ class DetailPageActivity4 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_page4)
-
+        //asdf
         val btnBack: Button = findViewById(R.id.btnBack)
         val dtAiTrack: TextView = findViewById(R.id.dtAiTrack)
         val buttonLike = findViewById<Button>(R.id.buttonLike)
