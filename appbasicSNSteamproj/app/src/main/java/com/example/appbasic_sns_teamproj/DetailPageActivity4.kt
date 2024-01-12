@@ -41,6 +41,10 @@ class DetailPageActivity4 : AppCompatActivity() {
             textViewLikeCount.text = "$likeCount"
 
         }
+
+        val b = 3
+        println(b)
+
 // Intent에서 extra 데이터 가져오기
 // 가져온 데이터를 화면에 표시
         dtAiTrack.text = username4
