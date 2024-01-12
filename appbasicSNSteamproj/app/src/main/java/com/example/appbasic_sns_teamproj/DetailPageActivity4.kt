@@ -30,6 +30,9 @@ class DetailPageActivity4 : AppCompatActivity() {
 
         setSlide(Direction.UP, Direction.STAY)
 
+        val a = 1
+        println(a)
+
         buttonLike.setOnClickListener {
             // Increment the like count
             likeCount++
